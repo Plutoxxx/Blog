@@ -13,18 +13,16 @@ tags:
 - Netlify 
 - 博客
 categories:
-- Hexo
-- GitHub
-- Netlify
-- 博客
+- 环境搭建
+
 ---
 
 # 我的博客源代码地址
-
+---
 大家有需要的可以star&fork我的[博客代码](https://github.com/Plutoxxx/Blog)，修改一些配置就可以写文章了。
 
 # 快速搭建
-
+---
 如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改还一些地方就行：
 * 在根目录配置文件_config.yml和themes config.yml中修改个人信息。
 * 在/_config.yml中修改deploy下的repository。
@@ -44,7 +42,7 @@ categories:
 	ctrl + c     #关闭本地服务器
 
 # 安装Node.js
-
+---
 首先下载稳定版本[Node.js](https://nodejs.org/en/)。
 
 安装选项默认就行，一路Next。
@@ -57,6 +55,7 @@ categories:
 
 	npm config set registry https://registry.npm.taobao.org
 # 安装Hexo
+---
 安装完Node.js后，打开终端，输入以下命令：
 
 	npm install -g hexo-cli
@@ -72,14 +71,14 @@ categories:
 最后按 `ctrl+c` 就能关闭本地服务器了
 
 # 安装Git和创建GitHub仓储
-
+---
 **安装Git**
 
 先到[Git官网](https://git-scm.com/download/win)下载软件。
 
 安装选项还是全部默认，只不过最后一步添加路径时选择Use Git from the Windows Command Prompt，这样我们就可以直接在命令提示符里打开git了。
 
-安装完成后在命令提示符中输入 `it --version` 验证是否安装成功。
+安装完成后在命令提示符中输入 `git --version` 验证是否安装成功。
 
 **创建GitHub仓储**
 
@@ -90,7 +89,7 @@ categories:
 ![](2.png)
 
 # 本地连接GitHub
-
+---
 右击打开 `Git Bash here` ，输入:ssh，如图所示，说明配置好了：
 ![](3.png)
 
@@ -159,7 +158,7 @@ categories:
 然后再次执行一下,执行完成我们到Github，神奇的的事发生了，我们的项目多了一个(run-page),这个分支就是我们后面要用来生成我们到静态页面的。
 
 # 部署到Netlify
-
+---
 我们先到[Netlify](https://www.netlify.com)官网注册一下账号,因为我们是将项目托管到GitHub的,所以我们选择GitHub登录：
 ![](7.png)
 点击网站新建：
@@ -193,7 +192,7 @@ categories:
 我们的个人博客就会自动进行刷新,是不是超厉害！！
 
 # 思路
-
+---
 部署完成之后,可能有的同学会觉得很晕,我画了一个部署的流程图：
 ![](13.png)
 这就是我们为什么要利用两个分支的原因,我们将我们的项目分支托管到 `master` ,然后将生成的 `public` 目录,托管到 `run-page` 分支,以后我们可以写完博客以后,就可以直接输入：
