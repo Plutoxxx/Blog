@@ -23,7 +23,7 @@ categories:
 
 # 快速搭建
 ---
-如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改还一些地方就行：
+如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：
 * 在根目录配置文件_config.yml和themes config.yml中修改个人信息。
 * 在/_config.yml中修改deploy下的repository。
 * 在/_config.yml中修改baidu_url_submit下的host。
