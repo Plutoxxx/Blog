@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>CVPR2019目标检测算法总结</title>
+      <link href="/2019/09/28/cvpr2019/"/>
+      <url>/2019/09/28/cvpr2019/</url>
+      
+        <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><hr><p>目标检测是很多计算机视觉应用的基础，比如实例分割、人体关键点提取、人脸识别等，它结合了目标分类和定位两个任务。</p><p>现代大多数目标检测器的框架是 (two-stage/single-stage)，目标检测被定义为一个多任务学习的过程，主要包括：</p><ul><li><p>区分前景物体与背景，并给它们分配恰当的类别标签。</p></li><li><p>回归相应的位置参数，最大化检测框与(GT\ bounding\ box)的交并比((IoU))或是其他指标。</p></li></ul><h1 id="目标检测主要的优化方向"><a href="#目标检测主要的优化方向" class="headerlink" title="目标检测主要的优化方向"></a>目标检测主要的优化方向</h1><hr><p>二维目标检测实现和优化方向包括backbone、IoU、损失函数、NMS、anchor、one shot learning/zero shot learning等。<br><br><strong>基于目标检测的backbone和特征提取</strong><br>目标检测的backbone一般是基于ImageNet预训练的图像分类网络。图像的分类只关注分类以及感受视野，不用关注目标的定位，目标检测同时还要关注图片的空间信息。如果下采样过多，会导致最后的Feature map很小，小目标很容易被忽略。现在很多基础网络，ResNet、MaskR-CNN、DenseNet、FPN、DetNet、RetinNet等能够提取图像的上下文信息，在特征提取上不断优化。<br><br><strong>基于位置回归的优化算法</strong><br>包括UnitBox、IoU-Net，能够预测检测到的边界框和它们对应的GT bounding box之间的IoU，使得该网络能像其分类模块一样，对检测框的定位精确程度有所掌握，神经网络在Backbone引入IoU-Net做边界修订。<br><br><strong>基于优化损失函数的方法</strong><br>主要有Smooth L1 loss、Smooth L2 loss、Focal loss等<br><br><strong>基于优化NMS的方法</strong><br>主要有Soft-NMS,Softer-NMS,以及Relation Netwrok，ConvNMS，NMS Network，Yes-Net等<br><br><strong>基于Anchor生成的算法</strong><br>有Sliding window、Region Proposal Network（RPN）、CornerNet、meta-anchor等。<br><br><strong>One-shot learning以及Zero shot learning</strong><br>都属于迁移学习领域主要研究的是网络少样本精准分类问题，单样本学习能力。</p><h1 id="GIoU"><a href="#GIoU" class="headerlink" title="GIoU"></a>GIoU</h1><hr><p><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Rezatofighi_Generalized_Intersection_Over_Union_A_Metric_and_a_Loss_for_CVPR_2019_paper.pdf" target="_blank" rel="noopener"><strong>论文下载</strong></a></p><h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>包围框回归是2D/3D视觉任务中的重要模块，不管是目标检测，目标跟踪，还是实例分割，都依赖于对bounding box进行回归，以获得准确的定位效果。</p><p>其中IoU((Intersection\ over\ Union))是使得包围框回归的重要参数。简单来讲就是模型产生的目标框((Result))与 (GT) 的重叠率。可以理解为检测结果与GT的交集比上它们的并集，公式为：</p><p>$$IoU=\frac{Result\bigcap GT}{Result\bigcup GT}$$</p><p>IoU是目标检测中一个重要的概念，在anchor-based的方法中，他的作用不仅用来确定正样本和负样本，还可以用来评价输出框((predict\ box))和(Ground\ Truth)的距离，或者说(predict\ box)的准确性。IoU有一个好的特性就是对尺度不敏感((scale\ invariant))。</p><p>在regression任务中，判断predict box和gt的距离最直接的指标就是IoU，但所采用的loss却不适合，如图所示，在loss相同的情况下，regression的效果却大不相同，也就是说loss没有体现出regression的效果，而IoU却可以根据不同的情况得到不同的数值，能最直接反应回归效果。</p><p><img src="1.png" alt></p><h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><p>本文提出用IoU这个直接指标来指导bounding box的回归。与其用一个代理的损失函数来监督学习，不如直接用指标本身来的好。此时损失函数为：<br>$$L_{IoU}=1-IoU$$</p><p>但是直接使用IoU作为损失函数会出现两个问题:</p><ul><li>如果两个框没有相交，根据定义，IoU=0，不能反映两者的距离大小（重合度）。同时因为loss=0，没有梯度回传，无法进行学习训练。</li><li>IoU无法精确的反映两者的重合度大小。如图所示，三种情况IoU都相等，但看得出来他们的重合度是不一样的，左边的图回归的效果最好，右边的最差。<br><img src="2.png" alt></li></ul><p>针对IoU的两个缺点，论文提出了一个新的指标<strong>GIoU</strong>((Generalized\ Intersection\ over\ Union))，如图所示：<br><img src="3.png" alt></p><p>GIoU的定义很简单，就是先计算两个框的最小闭包区域面积，再计算IoU，再计算闭包区域中不属于两个框的区域占闭包区域的比重，最后用IoU减去这个比重得到GIoU。GIoU有如下4个特点：</p><ul><li><p>与IoU相似，GIoU也是一种距离度量，作为损失函数的话，满足损失函数的基本要求。$$L_{GIoU}=1-GIoU$$</p></li><li><p>GIoU对scale不敏感。</p></li><li><p>GIoU是IoU的下界，在两个框无线重合的情况下，IoU=GIoU。</p></li><li><p>IoU取值[0,1]，但GIoU有对称区间，取值范围[-1,1]。在两者重合的时候取最大值1，在两者无交集且无限远的时候取最小值-1，因此GIoU是一个非常好的距离度量指标。</p></li><li><p>与IoU只关注重叠区域不同，GIoU不仅关注重叠区域，还关注其他的非重合区域，能更好的反映两者的重合度。</p></li></ul><p>其实GIoU不仅定义简单，在2D目标检测中计算方式也很简单，计算重合区域和IoU一样，计算最小闭包区域只需要得到两者max和min坐标，坐标围成的矩形就是最小闭包区域。</p><p>GIoU和IoU作为loss的算法如下所示：<br><img src="4.png" alt></p><p>步骤为：</p><ul><li>分别计算GT和Predict Box的面积</li><li>计算Intersection的面积</li><li>计算最小闭包区域面积</li><li>计算IoU和GIoU</li><li>根据公式得到loss</li></ul><h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><p>GIoU loss可以替换掉大多数目标检测算法中bounding box regression，本文选取了Faster R-CNN、Mask R-CNN和YOLO v3 三个方法验证GIoU loss的效果。实验在Pascal VOC和MS COCO数据集上进行。</p><p>效果如下：</p><p><img src="5.png" alt><br><img src="6.png" alt><br><img src="7.png" alt></p><p>可以看出YOLOv3在COCO上有明显涨点，但在其他模型下涨点并不明显，作者也指出了faster rcnn和mask rcnn效果不明显的原因是anchor很密，GIoU发挥作用的情况并不多。</p><p>总体来说，文章的motivation比较好，指出用L1、L2作为regression损失函数的缺点，以及用直接指标IoU作为损失函数的缺陷性，提出新的metric来代替L1、L2损失函数，从而提升regression效果，想法简单粗暴，但work的场景有很大局限性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> paper </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DeepLearning </tag>
+            
+            <tag> 目标检测 </tag>
+            
+            <tag> CVPR </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo-Github-Netlify博客搭建教程</title>
+      <link href="/2019/09/25/blog/"/>
+      <url>/2019/09/25/blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="我的博客源代码地址"><a href="#我的博客源代码地址" class="headerlink" title="我的博客源代码地址"></a>我的博客源代码地址</h1><hr><p>大家有需要的可以star&amp;fork我的<a href="https://github.com/Plutoxxx/Blog" target="_blank" rel="noopener">博客代码</a>，修改一些配置就可以写文章了。</p><h1 id="快速搭建"><a href="#快速搭建" class="headerlink" title="快速搭建"></a>快速搭建</h1><hr><p>如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：</p><ul><li>在根目录配置文件_config.yml和themes config.yml中修改个人信息。</li><li>在/_config.yml中修改deploy下的repository。</li><li>在/_config.yml中修改baidu_url_submit下的host。</li><li>在themes/_config.yml中修改gitalk。</li></ul><p><strong>当然在个性化设置前环境要先配置好</strong></p><p>平时常用的命令有：</p><pre><code>hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式hexo p  =&gt; hexo publish   hexo g  =&gt; hexo generate  #生成静态网页hexo s  =&gt; hexo server    #启动服务预览hexo d  =&gt; hexo deploy    #部署hexo clean   #清除缓存，网页正常情况下可以忽略此条命令ctrl + c     #关闭本地服务器</code></pre><h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><hr><p>首先下载稳定版本<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>。</p><p>安装选项默认就行，一路Next。</p><p>最后安装好之后，按Win+R打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p><p><strong>添加国内镜像源</strong></p><p>如果没梯子可以使用阿里的国内镜像进行加速</p><pre><code>npm config set registry https://registry.npm.taobao.org</code></pre><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><hr><p>安装完Node.js后，打开终端，输入以下命令：</p><pre><code>npm install -g hexo-clihexo -v  #查看是否安装成功</code></pre><p>在合适的位置新建文件夹，用来存放blog文件，比如我的博客文件在 F:\Project\GitHub\Blog 目录下。</p><p>在该目录下初始化网站，输入 <code>hexo init</code> 初始化文件夹，接着输入 <code>npm install</code> 安装必要组件。 </p><p>到这里，本地网站已经配置结束，输入 <code>hexo g</code> 生成静态网页，然后输入 <code>hexo s</code> 打开本地服务器，</p><p>最后在浏览器中打开: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就能看到初始化的blog啦。</p><p>最后按 <code>ctrl+c</code> 就能关闭本地服务器了</p><h1 id="安装Git和创建GitHub仓储"><a href="#安装Git和创建GitHub仓储" class="headerlink" title="安装Git和创建GitHub仓储"></a>安装Git和创建GitHub仓储</h1><hr><p><strong>安装Git</strong></p><p>先到<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git官网</a>下载软件。</p><p>安装选项还是全部默认，只不过最后一步添加路径时选择Use Git from the Windows Command Prompt，这样我们就可以直接在命令提示符里打开git了。</p><p>安装完成后在命令提示符中输入 <code>git --version</code> 验证是否安装成功。</p><p><strong>创建GitHub仓储</strong></p><p>到<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>注册一个账号，相信小伙伴们都有吧。然后新建一个项目，如图所示：<br><img src="1.png" alt></p><p>然后设置一下Repository的名字，如图所示，不要勾选下边的 <code>Initalize this repository with a README</code>如下图所示，点击完成就行。<br><img src="2.png" alt></p><h1 id="本地连接GitHub"><a href="#本地连接GitHub" class="headerlink" title="本地连接GitHub"></a>本地连接GitHub</h1><hr><p>右击打开 <code>Git Bash here</code> ，输入:ssh，如图所示，说明配置好了：<br><img src="3.png" alt></p><p>接着输入 <code>ssh-keygen -t rsa</code> （(主要是生成你跟github联系的秘钥key)）连续三个回车，key就生成了。打开C盘用户下的.ssh文件，其中 <code>id_rsa</code> 代表私钥， <code>id_rsa.pub</code> 代表公钥。</p><p>将id_rsa.pub下的内容复制出来，打开GitHub下的Settings<br><img src="4.png" alt></p><p>选择 <code>SSH and GPG keys</code> 中的 <code>New SSH key</code>粘贴进去就行了<br><img src="5.png" alt></p><p>测试连接 <code>ssh -T git@github.com</code>，弹出警告后，填写yes，然后回车，出现以下则表示成功<br><img src="6.png" alt></p><p>在Blog目录下，右击打开Git，输入命令： <code>git init</code>，会出现一个 <code>.git</code> 文件夹</p><p>在项目根目录下,将你的本地项目和新建的repository联系起来:</p><pre><code>git remote add origin https://github.com/your-name/your-Repository.git</code></pre><p>完成后到根目录下：</p><pre><code>git add .                       # 添加文件到暂缓区git commit -m &#39;First commit&#39;    # 将刚刚添加到暂缓区的内容提交到本地仓库.gitgit push --set-upstream origin master #上传到远程仓库(由于是第一次push,所以是这个命令)</code></pre><p>到这里,我们已经将我们的项目推送到GitHub的master分支下面了.接下来我们要对hexo进行一些配置:</p><p>打开博客根目录下的_config.yml文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。<br>修改最后一行的配置：</p><pre><code>deploy: type: git #部署方式 repository: git@github.com:you-name/your-Repository.git #关联github仓库 branch: run-page #部署分支</code></pre><p>在这里,我们将在这个项目仓库下新建一个run-page分支,至于有什么用,我等一下解释,先跟着我操作起来.</p><p>在当前根目录下将不需要同步的文件和目录写到 <code>.gitignore</code> :</p><pre><code>.DS_StoreThumbs.dbdb.json*.lognode_modules/themes/.deploy*/</code></pre><p>配置好了之后,保存退出,我们重新执行一下:</p><pre><code>$ hexo clean #清理各种缓存和旧文件$ hexo g     #生成静态文件</code></pre><p>最后,我们将public目录同步到Github:</p><pre><code>$ hexo d #部署应用</code></pre><p>在执行这个命令的时候,我们可能会出现如下错误：</p><pre><code>$ ERROR Deployer not found: git</code></pre><p>那是因为我们缺少一个依赖,我们安装一下:</p><pre><code>npm install hexo-deployer-git --save</code></pre><p>然后再次执行一下,执行完成我们到Github，神奇的的事发生了，我们的项目多了一个(run-page),这个分支就是我们后面要用来生成我们到静态页面的。</p><h1 id="部署到Netlify"><a href="#部署到Netlify" class="headerlink" title="部署到Netlify"></a>部署到Netlify</h1><hr><p>我们先到<a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a>官网注册一下账号,因为我们是将项目托管到GitHub的,所以我们选择GitHub登录：<br><img src="7.png" alt><br>点击网站新建：<br><img src="8.png" alt></p><p>选择GitHub来源：<br><img src="9.png" alt></p><p>选择刚建的项目：<br><img src="10.png" alt></p><p>进行下一步配置：<br><img src="11.png" alt></p><p>等待一会，Netlify会帮我们生成网站：<br><img src="12.png" alt></p><p>第一次新建的时候,它会随机生成一个Netlify的二级域名,我们可以进行自定义二级域名,点击(“Change site name”)即可进行设置,像这样：<br><img src="14.png" alt><br><img src="15.png" alt></p><p>点击Save,等待Netlify进行热部署即可.</p><p>然后点击创建好的二级域名,成功访问✌️！！！</p><p>以后我们写好博客之后,直接执行：</p><pre><code>$ hexo clean $ hexo g     $ hexo d</code></pre><p>我们的个人博客就会自动进行刷新,是不是超厉害！！</p><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><hr><p>部署完成之后,可能有的同学会觉得很晕,我画了一个部署的流程图：<br><img src="13.png" alt><br>这就是我们为什么要利用两个分支的原因,我们将我们的项目分支托管到 <code>master</code> ,然后将生成的 <code>public</code> 目录,托管到 <code>run-page</code> 分支,以后我们可以写完博客以后,就可以直接输入：</p><pre><code>$ hexo clean #清理各种缓存和旧文件$ hexo g     #生成静态文件$ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦我们推送到run-page分支,Netlify监测到我们的仓库发生了变化,就会根据这个分支的变化进行实时拉取并部署。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> GitHub </tag>
+            
+            <tag> Netlify </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

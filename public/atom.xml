@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ArSw的博客</title>
+  
+  <subtitle>ArSw</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://yangting.online/"/>
+  <updated>2019-09-30T07:26:05.349Z</updated>
+  <id>https://yangting.online/</id>
+  
+  <author>
+    <name>ArSw</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVPR2019目标检测算法总结</title>
+    <link href="https://yangting.online/2019/09/28/cvpr2019/"/>
+    <id>https://yangting.online/2019/09/28/cvpr2019/</id>
+    <published>2019-09-28T00:22:19.000Z</published>
+    <updated>2019-09-30T07:26:05.349Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="https://yangting.online/categories/paper/"/>
+    
+    
+      <category term="DeepLearning" scheme="https://yangting.online/tags/DeepLearning/"/>
+    
+      <category term="目标检测" scheme="https://yangting.online/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+      <category term="CVPR" scheme="https://yangting.online/tags/CVPR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Github-Netlify博客搭建教程</title>
+    <link href="https://yangting.online/2019/09/25/blog/"/>
+    <id>https://yangting.online/2019/09/25/blog/</id>
+    <published>2019-09-25T00:27:14.000Z</published>
+    <updated>2019-10-19T01:00:20.502Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;我的博客源代码地址&quot;&gt;&lt;a href=&quot;#我的博客源代码地址&quot; class=&quot;headerlink&quot; title=&quot;我的博客源代码地址&quot;&gt;&lt;/a&gt;我的博客源代码地址&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;大家有需要的可以star&amp;amp;fork我的&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="环境搭建" scheme="https://yangting.online/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="https://yangting.online/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="https://yangting.online/tags/GitHub/"/>
+    
+      <category term="Netlify" scheme="https://yangting.online/tags/Netlify/"/>
+    
+      <category term="博客" scheme="https://yangting.online/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>

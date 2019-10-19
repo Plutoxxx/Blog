@@ -238,13 +238,14 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: false
+  enable: true
   owner: Plutoxxx
   repo: Blog
   oauth:
-    clientId: 
-    clientSecret: 
+    clientId: f6e283172d46de8a1873
+    clientSecret: 699e9eb0cdf524d7935ed3bef7279a642887fc74
   admin: Plutoxxx
+  
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
@@ -272,9 +273,9 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId: 
-  appKey: 
+  enable: true
+  appId: PgmTJ3buD3fi6JvyEIyx9Xab-gzGzoHsz
+  appKey: wXAJqrwJU8R44TNvwXvtvAFy
   notify: false
   verify: false
   visitor: false
