@@ -5,4 +5,4 @@ My personal modified hexo matery theme with some bugs fixed, modified from [hexo
 [https://yangting.online](http://www.yangting.online/)
 
 # Usage
-[https://yangting.online/2019/09/25](https://www.yangting.online/2019/09/25/hexo-github-netlify-bo-ke-da-jian-jiao-cheng/)
+[https://yangting.online/2019/09/25/blog/](https://www.yangting.online/2019/09/25/blog/)
