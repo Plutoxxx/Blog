@@ -4,16 +4,19 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo-Github-Netlify博客搭建教程, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
+    <meta name="keywords" content="Java基础①, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="我的博客源代码地址
-大家有需要的可以star&amp;amp;fork我的博客代码，修改一些配置就可以写文章了。
-快速搭建
-如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：
+    <meta name="description" content="Java面向对象
+对象和封装
+当一个对象作为参数，传递到方法中时，实际上传递的是地址值。
+局部变量、成员变量区别
 
-在根目录配置文件_config.">
+
+定义的位置不一样(重点)局部：在方法的内部。成员：在方法的外部，直接写在类当中。
+
+作用范围不一样(重点)局部：只在方法当">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo-Github-Netlify博客搭建教程 | ArSw的博客</title>
+    <title>Java基础① | ArSw的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -295,13 +298,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo-Github-Netlify博客搭建教程
+                        Java基础①
                     </div>
                 </div>
             </div>
@@ -412,20 +415,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
+                        <a href="/tags/Java/" target="_blank">
+                            <span class="chip bg-color">Java</span>
                         </a>
                         
-                        <a href="/tags/GitHub/" target="_blank">
-                            <span class="chip bg-color">GitHub</span>
-                        </a>
-                        
-                        <a href="/tags/Netlify/" target="_blank">
-                            <span class="chip bg-color">Netlify</span>
-                        </a>
-                        
-                        <a href="/tags/博客/" target="_blank">
-                            <span class="chip bg-color">博客</span>
+                        <a href="/tags/基础/" target="_blank">
+                            <span class="chip bg-color">基础</span>
                         </a>
                         
                     </div>
@@ -436,8 +431,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/环境搭建/" class="post-category" target="_blank">
-                            环境搭建
+                        <a href="/categories/Java/" class="post-category" target="_blank">
+                            Java
                         </a>
                         
                     </div>
@@ -448,7 +443,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-25
+                    2019-10-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -462,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
                 
@@ -485,94 +480,163 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="我的博客源代码地址"><a href="#我的博客源代码地址" class="headerlink" title="我的博客源代码地址"></a>我的博客源代码地址</h1><hr>
-<p>大家有需要的可以star&amp;fork我的<a href="https://github.com/Plutoxxx/Blog" target="_blank" rel="noopener">博客代码</a>，修改一些配置就可以写文章了。</p>
-<h1 id="快速搭建"><a href="#快速搭建" class="headerlink" title="快速搭建"></a>快速搭建</h1><hr>
-<p>如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：</p>
+                <h1 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h1><hr>
+<h2 id="对象和封装"><a href="#对象和封装" class="headerlink" title="对象和封装"></a>对象和封装</h2><ol>
+<li>当一个对象作为参数，传递到方法中时，实际上传递的是地址值。</li>
+<li><strong>局部变量、成员变量区别</strong></li>
+</ol>
 <ul>
-<li>在根目录配置文件_config.yml和themes config.yml中修改个人信息。</li>
-<li>在/_config.yml中修改deploy下的repository。</li>
-<li>在/_config.yml中修改baidu_url_submit下的host。</li>
-<li>在themes/_config.yml中修改gitalk。</li>
+<li><p>定义的位置不一样(<strong>重点</strong>)<br>局部：在方法的内部。<br>成员：在方法的外部，直接写在类当中。</p>
+</li>
+<li><p>作用范围不一样(<strong>重点</strong>)<br>局部：只在方法当中才有用，出了方法就不能用了。<br>成员：整个类都能使用。</p>
+</li>
+<li><p>默认值不同(<strong>重点</strong>)<br>局部：没有默认值，要想用，必须手动赋值。<br>成员：如果没有赋值，会有默认值，规则和数组一样。</p>
+</li>
+<li><p>内存的位置不一样(了解)<br>局部：位于栈内存。<br>成员：位于堆内存。</p>
+</li>
+<li><p>生命周期不一样<br>局部：随着方法进栈而诞生，随着方法的出栈而消失。<br>成员：随着对象创建而诞生，随着对象被垃圾回收而消失。</p>
+</li>
 </ul>
-<p><strong>当然在个性化设置前环境要先配置好</strong></p>
-<p>平时常用的命令有：</p>
-<pre><code>hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式
-hexo p  =&gt; hexo publish   
-hexo g  =&gt; hexo generate  #生成静态网页
-hexo s  =&gt; hexo server    #启动服务预览
-hexo d  =&gt; hexo deploy    #部署
-hexo clean   #清除缓存，网页正常情况下可以忽略此条命令
-ctrl + c     #关闭本地服务器</code></pre><h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><hr>
-<p>首先下载稳定版本<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>。</p>
-<p>安装选项默认就行，一路Next。</p>
-<p>最后安装好之后，按Win+R打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
-<p><strong>添加国内镜像源</strong></p>
-<p>如果没梯子可以使用阿里的国内镜像进行加速</p>
-<pre><code>npm config set registry https://registry.npm.taobao.org</code></pre><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><hr>
-<p>安装完Node.js后，打开终端，输入以下命令：</p>
-<pre><code>npm install -g hexo-cli
-hexo -v  #查看是否安装成功</code></pre><p>在合适的位置新建文件夹，用来存放blog文件，比如我的博客文件在 F:\Project\GitHub\Blog 目录下。</p>
-<p>在该目录下初始化网站，输入 <code>hexo init</code> 初始化文件夹，接着输入 <code>npm install</code> 安装必要组件。 </p>
-<p>到这里，本地网站已经配置结束，输入 <code>hexo g</code> 生成静态网页，然后输入 <code>hexo s</code> 打开本地服务器，</p>
-<p>最后在浏览器中打开: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就能看到初始化的blog啦。</p>
-<p>最后按 <code>ctrl+c</code> 就能关闭本地服务器了</p>
-<h1 id="安装Git和创建GitHub仓储"><a href="#安装Git和创建GitHub仓储" class="headerlink" title="安装Git和创建GitHub仓储"></a>安装Git和创建GitHub仓储</h1><hr>
-<p><strong>安装Git</strong></p>
-<p>先到<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git官网</a>下载软件。</p>
-<p>安装选项还是全部默认，只不过最后一步添加路径时选择Use Git from the Windows Command Prompt，这样我们就可以直接在命令提示符里打开git了。</p>
-<p>安装完成后在命令提示符中输入 <code>git --version</code> 验证是否安装成功。</p>
-<p><strong>创建GitHub仓储</strong></p>
-<p>到<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>注册一个账号，相信小伙伴们都有吧。然后新建一个项目，如图所示：<br><img src="1.png" alt></p>
-<p>然后设置一下Repository的名字，如图所示，不要勾选下边的 <code>Initalize this repository with a README</code>如下图所示，点击完成就行。<br><img src="2.png" alt></p>
-<h1 id="本地连接GitHub"><a href="#本地连接GitHub" class="headerlink" title="本地连接GitHub"></a>本地连接GitHub</h1><hr>
-<p>右击打开 <code>Git Bash here</code> ，输入:ssh，如图所示，说明配置好了：<br><img src="3.png" alt></p>
-<p>接着输入 <code>ssh-keygen -t rsa</code> （(主要是生成你跟github联系的秘钥key)）连续三个回车，key就生成了。打开C盘用户下的.ssh文件，其中 <code>id_rsa</code> 代表私钥， <code>id_rsa.pub</code> 代表公钥。</p>
-<p>将id_rsa.pub下的内容复制出来，打开GitHub下的Settings<br><img src="4.png" alt></p>
-<p>选择 <code>SSH and GPG keys</code> 中的 <code>New SSH key</code>粘贴进去就行了<br><img src="5.png" alt></p>
-<p>测试连接 <code>ssh -T git@github.com</code>，弹出警告后，填写yes，然后回车，出现以下则表示成功<br><img src="6.png" alt></p>
-<p>在Blog目录下，右击打开Git，输入命令： <code>git init</code>，会出现一个 <code>.git</code> 文件夹</p>
-<p>在项目根目录下,将你的本地项目和新建的repository联系起来:</p>
-<pre><code>git remote add origin https://github.com/your-name/your-Repository.git</code></pre><p>完成后到根目录下：</p>
-<pre><code>git add .                       # 添加文件到暂缓区
-git commit -m &#39;First commit&#39;    # 将刚刚添加到暂缓区的内容提交到本地仓库.git
-git push --set-upstream origin master #上传到远程仓库(由于是第一次push,所以是这个命令)</code></pre><p>到这里,我们已经将我们的项目推送到GitHub的master分支下面了.接下来我们要对hexo进行一些配置:</p>
-<p>打开博客根目录下的_config.yml文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。<br>修改最后一行的配置：</p>
-<pre><code>deploy:
- type: git #部署方式
- repository: git@github.com:you-name/your-Repository.git #关联github仓库
- branch: run-page #部署分支</code></pre><p>在这里,我们将在这个项目仓库下新建一个run-page分支,至于有什么用,我等一下解释,先跟着我操作起来.</p>
-<p>在当前根目录下将不需要同步的文件和目录写到 <code>.gitignore</code> :</p>
-<pre><code>.DS_Store
-Thumbs.db
-db.json
-*.log
-node_modules/
-themes/
-.deploy*/</code></pre><p>配置好了之后,保存退出,我们重新执行一下:</p>
-<pre><code>$ hexo clean #清理各种缓存和旧文件
-$ hexo g     #生成静态文件</code></pre><p>最后,我们将public目录同步到Github:</p>
-<pre><code>$ hexo d #部署应用</code></pre><p>在执行这个命令的时候,我们可能会出现如下错误：</p>
-<pre><code>$ ERROR Deployer not found: git</code></pre><p>那是因为我们缺少一个依赖,我们安装一下:</p>
-<pre><code>npm install hexo-deployer-git --save</code></pre><p>然后再次执行一下,执行完成我们到Github，神奇的的事发生了，我们的项目多了一个(run-page),这个分支就是我们后面要用来生成我们到静态页面的。</p>
-<h1 id="部署到Netlify"><a href="#部署到Netlify" class="headerlink" title="部署到Netlify"></a>部署到Netlify</h1><hr>
-<p>我们先到<a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a>官网注册一下账号,因为我们是将项目托管到GitHub的,所以我们选择GitHub登录：<br><img src="7.png" alt><br>点击网站新建：<br><img src="8.png" alt></p>
-<p>选择GitHub来源：<br><img src="9.png" alt></p>
-<p>选择刚建的项目：<br><img src="10.png" alt></p>
-<p>进行下一步配置：<br><img src="11.png" alt></p>
-<p>等待一会，Netlify会帮我们生成网站：<br><img src="12.png" alt></p>
-<p>第一次新建的时候,它会随机生成一个Netlify的二级域名,我们可以进行自定义二级域名,点击(“Change site name”)即可进行设置,像这样：<br><img src="14.png" alt><br><img src="15.png" alt></p>
-<p>点击Save,等待Netlify进行热部署即可.</p>
-<p>然后点击创建好的二级域名,成功访问✌️！！！</p>
-<p>以后我们写好博客之后,直接执行：</p>
-<pre><code>$ hexo clean 
-$ hexo g     
-$ hexo d</code></pre><p>我们的个人博客就会自动进行刷新,是不是超厉害！！</p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><hr>
-<p>部署完成之后,可能有的同学会觉得很晕,我画了一个部署的流程图：<br><img src="13.png" alt><br>这就是我们为什么要利用两个分支的原因,我们将我们的项目分支托管到 <code>master</code> ,然后将生成的 <code>public</code> 目录,托管到 <code>run-page</code> 分支,以后我们可以写完博客以后,就可以直接输入：</p>
-<pre><code>$ hexo clean #清理各种缓存和旧文件
-$ hexo g     #生成静态文件
-$ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦我们推送到run-page分支,Netlify监测到我们的仓库发生了变化,就会根据这个分支的变化进行实时拉取并部署。</p>
+<ol start="3">
+<li><p>封装就是将一些细节信息隐藏起来，对外界不可见。</p>
+</li>
+<li><p>构造方法是专门用来创建对象的方法，当我们利用关键字new来创建对象时，其实就是调用的构造方法。格式如下：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//无参构造方法</span>
+<span class="token keyword">public</span> <span class="token function">class_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ 方法体
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//有参构造方法</span>
+<span class="token keyword">public</span> <span class="token function">class_name</span><span class="token punctuation">(</span>type name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+ 方法体
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li><p>在继承中，“子类就是一个父类”，就是说子类可以被当成一个父类看待。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//父类格式：</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Fu_class</span><span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//子类格式：</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Zi_class</span> <span class="token keyword">extends</span> <span class="token class-name">Fu_class</span><span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在子类中，访问变量的方式如下：</p>
+<pre class="line-numbers language-java"><code class="language-java">局部变量：name
+本类成员变量：<span class="token keyword">this</span><span class="token punctuation">.</span>name
+父类成员变量：<span class="token keyword">super</span><span class="token punctuation">.</span>name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>重写((override)):在继承关系中，方法名称一样，参数列表也<strong>一样</strong>。<br>重载((overload)):方法名称一样，参数列表<strong>不一样</strong>。</p>
+</li>
+<li><p>重写注意事项：</p>
+</li>
+</ol>
+<ul>
+<li>必须保证父子类之间的名称相同，参数列表也相同,利用<code>@Override</code>来检测是不是有效的覆盖重写<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">name</span><span class="token punctuation">(</span>type parameter_name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  方法体
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>子类方法的返回值必须<strong>小于等于</strong>父类方法的返回值范围</li>
+<li>子类方法的权限必须<strong>大于等于</strong>父类方法的权限修饰符<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token operator">></span> <span class="token keyword">protected</span> <span class="token operator">></span> <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token keyword">private</span>
+<span class="token comment" spellcheck="true">//default指的是留空，不写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<ol start="4">
+<li><p>继承关系中，父类构造方法的访问特点：<br>子类必须调用父类构造方法，不写则赠送一个<code>super()</code>方法，写了则用指定的super调用，super只能有一个，还必须是第一个。</p>
+</li>
+<li><p>继承中super关键字的用法有3种：</p>
+</li>
+</ol>
+<ul>
+<li>在子类的<strong>成员方法</strong>中，访问父类的<strong>成员变量</strong>。</li>
+<li>在子类的<strong>成员方法</strong>中，访问父类的<strong>成员方法</strong>。</li>
+<li>在子类的<strong>构造方法</strong>中，访问父类的<strong>构造方法</strong>。</li>
+</ul>
+<h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><ol>
+<li><p>抽象方法：在权限修饰符后加上<code>abstract</code>关键字，去掉大括号，分号结束。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">method_name</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>抽象类：在class前加上<code>abstract</code>即为抽象类。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">class_name</span><span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>使用抽象类和抽象方法：</p>
+</li>
+</ol>
+<ul>
+<li>不能直接<code>new</code>（创建）抽象类对象</li>
+<li>必须用一个子类来继承抽象父类</li>
+<li>子类必须覆盖重写（去掉<code>abstract</code>关键字，写方法体）抽象父类中的所有抽象方法</li>
+<li>创建子类对象进行使用</li>
+</ul>
+<h2 id="接口（Interface）"><a href="#接口（Interface）" class="headerlink" title="接口（Interface）"></a>接口（Interface）</h2><ol>
+<li>接口使用步骤：</li>
+</ol>
+<ul>
+<li><p>建立一个<code>Interface</code>类，里边写抽象方法</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> Interface <span class="token class-name">Interface_name</span><span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>接口不能直接使用，必须有一个“实现类”来“实现”该接口</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">imp_name</span> <span class="token keyword">implements</span> <span class="token class-name">Interface_name</span><span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>接口的实现类必须覆盖重写（实现）接口中<strong>所有</strong>的抽象类</p>
+</li>
+<li><p>创建实现类的对象，进行使用</p>
+</li>
+</ul>
+<ol start="2">
+<li><p>接口中定义”成员变量”，使用<code>public static final</code>进行修饰，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//其中public static final可以省略，但是不写，默认也是这样</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> type var_name <span class="token operator">=</span> value<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>类-接口：</p>
+</li>
+</ol>
+<ul>
+<li>类与类之间是单继承，直接父类只有一个</li>
+<li>类与接口之间是多实现的，一个类可以实现多个接口</li>
+<li>接口与接口之间是多继承的</li>
+<li>多个父接口之间当中的抽象方法如果重复，没有关系</li>
+<li>多个父接口当中的默认方法（<code>defaule</code>关键字）如果重复，那么子接口必须进行默认方法的重写</li>
+</ul>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ol>
+<li><p>其实就是一句话：父类引用指向子类对象，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java">Fu_class obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi_class</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//or</span>
+Interface_name obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">implements_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>多态下成员变量、成员方法使用口诀：</p>
+</li>
+</ol>
+<ul>
+<li>成员变量：编译看左边，运行看左边</li>
+<li>成员方法：编译看左边，运行看右边</li>
+</ul>
+<ol start="3">
+<li>对象的转型</li>
+</ol>
+<ul>
+<li><p>对象的向上转型，其实就是多态写法，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java">Fu_class obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi_class</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>对象的向下转型，其实就是[<strong>还原</strong>]动作，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java">Zi_class obj <span class="token operator">=</span> <span class="token punctuation">(</span>Zi_class<span class="token punctuation">)</span> <span class="token function">Fu_obj_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><code>instance of</code>会得到一个<code>boolean</code>值结果，判断前边的对象能不能作为后边类型的实例</p>
+<pre class="line-numbers language-java"><code class="language-java">obj instance of class_name<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h2 id="四种权限修饰符"><a href="#四种权限修饰符" class="headerlink" title="四种权限修饰符"></a>四种权限修饰符</h2><pre class="line-numbers language-java"><code class="language-java">                    <span class="token keyword">public</span>  <span class="token operator">></span>   <span class="token keyword">protected</span>  <span class="token operator">></span>  <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span>  <span class="token operator">></span>  <span class="token keyword">private</span>
+同一个类<span class="token punctuation">(</span>我自己<span class="token punctuation">)</span>       √            √             √            √
+同一个包<span class="token punctuation">(</span>我领居<span class="token punctuation">)</span>       √            √             √            ×
+不同包子类<span class="token punctuation">(</span>我儿子<span class="token punctuation">)</span>     √            √             ×            ×
+不同包非子类（陌生人） √            ×             ×            ×<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -731,9 +795,9 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo-Github-Netlify博客搭建教程》
+                    《Java基础①》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/25/blog/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/27/java1/" property="cc:attributionName"
                rel="cc:attributionURL">
                 ArSw
             </a> 采用
@@ -774,7 +838,7 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
         repo: 'Blog',
         owner: 'Plutoxxx',
         admin: "Plutoxxx",
-        id: '2019/09/25/blog/',
+        id: '2019/10/27/java1/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1057,9 +1121,72 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/10/27/java1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="Java基础①">
+                        
+                        <span class="card-title">Java基础①</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java面向对象
+对象和封装
+当一个对象作为参数，传递到方法中时，实际上传递的是地址值。
+局部变量、成员变量区别
+
+
+定义的位置不一样(重点)局部：在方法的内部。成员：在方法的外部，直接写在类当中。
+
+作用范围不一样(重点)局部：只在方法当
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/基础/" target="_blank">
+                        <span class="chip bg-color">基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/09/28/cvpr2019/">
                     <div class="card-image">
@@ -1079,9 +1206,9 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1107,73 +1234,6 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
                     
                     <a href="/tags/CVPR/" target="_blank">
                         <span class="chip bg-color">CVPR</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/25/blog/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Hexo-Github-Netlify博客搭建教程">
-                        
-                        <span class="card-title">Hexo-Github-Netlify博客搭建教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            我的博客源代码地址
-大家有需要的可以star&amp;fork我的博客代码，修改一些配置就可以写文章了。
-快速搭建
-如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：
-
-在根目录配置文件_config.
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/环境搭建/" class="post-category" target="_blank">
-                                    环境搭建
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/GitHub/" target="_blank">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                    <a href="/tags/Netlify/" target="_blank">
-                        <span class="chip bg-color">Netlify</span>
-                    </a>
-                    
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>
