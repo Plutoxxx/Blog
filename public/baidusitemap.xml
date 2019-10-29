@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yangting.online/2019/10/27/java1/</loc>
-    <lastmod>2019-10-27</lastmod>
-  </url>  <url>
     <loc>https://yangting.online/2019/09/25/blog/</loc>
-    <lastmod>2019-10-19</lastmod>
+    <lastmod>2019-10-29</lastmod>
   </url>  <url>
     <loc>https://yangting.online/2019/09/28/cvpr2019/</loc>
-    <lastmod>2019-09-30</lastmod>
+    <lastmod>2019-10-29</lastmod>
+  </url>  <url>
+    <loc>https://yangting.online/2019/10/27/java1/</loc>
+    <lastmod>2019-10-29</lastmod>
   </url>
 </urlset>

@@ -8,15 +8,18 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="Java面向对象
+    <meta name="description" content="
+
+
+主要讲解Java面向对象的基本特性，若有错误之处，望批评指正😆。
+
+Java面向对象
 对象和封装
 当一个对象作为参数，传递到方法中时，实际上传递的是地址值。
 局部变量、成员变量区别
 
 
-定义的位置不一样(重点)局部：在方法的内部。成员：在方法的外部，直接写在类当中。
-
-作用范围不一样(重点)局部：只在方法当">
+定义的位置不一样(重点)局部：在方法的内部。成">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -298,7 +301,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -457,7 +460,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.3k
                 </div>
                 
 
@@ -480,7 +483,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h1><hr>
+                <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=22822489&auto=1&height=66"></iframe></div>
+
+<blockquote>
+<p>主要讲解Java面向对象的基本特性，若有错误之处，望批评指正😆。</p>
+</blockquote>
+<h1 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h1><hr>
 <h2 id="对象和封装"><a href="#对象和封装" class="headerlink" title="对象和封装"></a>对象和封装</h2><ol>
 <li>当一个对象作为参数，传递到方法中时，实际上传递的是地址值。</li>
 <li><strong>局部变量、成员变量区别</strong></li>
@@ -492,9 +500,9 @@
 </li>
 <li><p>默认值不同(<strong>重点</strong>)<br>局部：没有默认值，要想用，必须手动赋值。<br>成员：如果没有赋值，会有默认值，规则和数组一样。</p>
 </li>
-<li><p>内存的位置不一样(了解)<br>局部：位于栈内存。<br>成员：位于堆内存。</p>
+<li><p>内存的位置不一样(<strong>了解</strong>)<br>局部：位于栈内存。<br>成员：位于堆内存。</p>
 </li>
-<li><p>生命周期不一样<br>局部：随着方法进栈而诞生，随着方法的出栈而消失。<br>成员：随着对象创建而诞生，随着对象被垃圾回收而消失。</p>
+<li><p>生命周期不一样(<strong>了解</strong>)<br>局部：随着方法进栈而诞生，随着方法的出栈而消失。<br>成员：随着对象创建而诞生，随着对象被垃圾回收而消失。</p>
 </li>
 </ul>
 <ol start="3">
@@ -632,11 +640,45 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
 <pre class="line-numbers language-java"><code class="language-java">obj instance of class_name<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
-<h2 id="四种权限修饰符"><a href="#四种权限修饰符" class="headerlink" title="四种权限修饰符"></a>四种权限修饰符</h2><pre class="line-numbers language-java"><code class="language-java">                    <span class="token keyword">public</span>  <span class="token operator">></span>   <span class="token keyword">protected</span>  <span class="token operator">></span>  <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">)</span>  <span class="token operator">></span>  <span class="token keyword">private</span>
-同一个类<span class="token punctuation">(</span>我自己<span class="token punctuation">)</span>       √            √             √            √
-同一个包<span class="token punctuation">(</span>我领居<span class="token punctuation">)</span>       √            √             √            ×
-不同包子类<span class="token punctuation">(</span>我儿子<span class="token punctuation">)</span>     √            √             ×            ×
-不同包非子类（陌生人） √            ×             ×            ×<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="四种权限修饰符"><a href="#四种权限修饰符" class="headerlink" title="四种权限修饰符"></a>四种权限修饰符</h2><table>
+<thead>
+<tr>
+<th>范围</th>
+<th>public</th>
+<th>protected</th>
+<th>((default))</th>
+<th>private</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>同一个类（我自己）</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>同一个包（我领居）</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>不同包子类（我儿子）</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>不同包非子类（陌生人）</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr />
@@ -1130,7 +1172,7 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="Java基础①">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Java基础①">
                         
                         <span class="card-title">Java基础①</span>
                     </div>
@@ -1138,15 +1180,18 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java面向对象
+                            
+
+
+主要讲解Java面向对象的基本特性，若有错误之处，望批评指正😆。
+
+Java面向对象
 对象和封装
 当一个对象作为参数，传递到方法中时，实际上传递的是地址值。
 局部变量、成员变量区别
 
 
-定义的位置不一样(重点)局部：在方法的内部。成员：在方法的外部，直接写在类当中。
-
-作用范围不一样(重点)局部：只在方法当
+定义的位置不一样(重点)局部：在方法的内部。成
                         
                     </div>
                     <div class="publish-info">
@@ -1192,7 +1237,7 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CVPR2019目标检测算法总结">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CVPR2019目标检测算法总结">
                         
                         <span class="card-title">CVPR2019目标检测算法总结</span>
                     </div>
@@ -1200,9 +1245,14 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            介绍
+                            
+
+
+介绍一下目标检测主要的优化方向，以及CVPR2019中目标检测相关的论文。
+
+介绍
 目标检测是很多计算机视觉应用的基础，比如实例分割、人体关键点提取、人脸识别等，它结合了目标分类和定位两个任务。
-现代大多数目标检测器的框架是 (two-stage/single-stage)，目标检测被定义为一个多任务学习的过程，主要
+现代大多数目标检测器的框架是 (two
                         
                     </div>
                     <div class="publish-info">
@@ -1395,7 +1445,7 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.5k</span>
+            <span class="white-color">4.7k</span>
             
 
             <br>

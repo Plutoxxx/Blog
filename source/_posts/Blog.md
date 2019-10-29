@@ -16,6 +16,9 @@ categories:
 - 环境搭建
 
 ---
+<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=591241&auto=1&height=66"></iframe></div>
+
+>主要讲解本blog的搭建过程，如有不详之处，可以联系我，或者在下方评论，我都会解答哒😁。
 
 # 我的博客源代码地址
 ---
@@ -32,14 +35,15 @@ categories:
 **当然在个性化设置前环境要先配置好**
 
 平时常用的命令有：
-
-	hexo n "博客名称"  => hexo new "博客名称"   #这两个都是创建新文章，前者是简写模式
-	hexo p  => hexo publish   
-	hexo g  => hexo generate  #生成静态网页
-	hexo s  => hexo server    #启动服务预览
-	hexo d  => hexo deploy    #部署
-	hexo clean   #清除缓存，网页正常情况下可以忽略此条命令
-	ctrl + c     #关闭本地服务器
+```java
+hexo n "博客名称"  => hexo new "博客名称"   #这两个都是创建新文章，前者是简写模式
+hexo p  => hexo publish   
+hexo g  => hexo generate  #生成静态网页
+hexo s  => hexo server    #启动服务预览
+hexo d  => hexo deploy    #部署
+hexo clean   #清除缓存，网页正常情况下可以忽略此条命令
+ctrl + c     #关闭本地服务器
+```
 
 # 安装Node.js
 ---
@@ -52,14 +56,16 @@ categories:
 **添加国内镜像源**
 
 如果没梯子可以使用阿里的国内镜像进行加速
-
-	npm config set registry https://registry.npm.taobao.org
+```js
+npm config set registry https://registry.npm.taobao.org
+```
 # 安装Hexo
 ---
 安装完Node.js后，打开终端，输入以下命令：
-
-	npm install -g hexo-cli
-	hexo -v  #查看是否安装成功
+```hexo
+npm install -g hexo-cli
+hexo -v  #查看是否安装成功
+```
 在合适的位置新建文件夹，用来存放blog文件，比如我的博客文件在 F:\Project\GitHub\Blog 目录下。
 
 在该目录下初始化网站，输入 `hexo init` 初始化文件夹，接着输入 `npm install` 安装必要组件。 
@@ -107,54 +113,57 @@ categories:
 在Blog目录下，右击打开Git，输入命令： `git init`，会出现一个 `.git` 文件夹
 
 在项目根目录下,将你的本地项目和新建的repository联系起来:
-
-	git remote add origin https://github.com/your-name/your-Repository.git
-
+```git
+git remote add origin https://github.com/your-name/your-Repository.git
+```
 完成后到根目录下：
-	
-	git add .                       # 添加文件到暂缓区
-	git commit -m 'First commit'    # 将刚刚添加到暂缓区的内容提交到本地仓库.git
-	git push --set-upstream origin master #上传到远程仓库(由于是第一次push,所以是这个命令)
-
+```git	
+git add .                       # 添加文件到暂缓区
+git commit -m 'First commit'    # 将刚刚添加到暂缓区的内容提交到本地仓库.git
+git push --set-upstream origin master #上传到远程仓库(由于是第一次push,所以是这个命令)
+```
 到这里,我们已经将我们的项目推送到GitHub的master分支下面了.接下来我们要对hexo进行一些配置:
 
 打开博客根目录下的_config.yml文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。
 修改最后一行的配置：
-
-	deploy:
-	 type: git #部署方式
-	 repository: git@github.com:you-name/your-Repository.git #关联github仓库
-	 branch: run-page #部署分支
-
+```config
+deploy:
+ type: git #部署方式
+ repository: git@github.com:you-name/your-Repository.git #关联github仓库
+ branch: run-page #部署分支
+```
 在这里,我们将在这个项目仓库下新建一个run-page分支,至于有什么用,我等一下解释,先跟着我操作起来.
 
 在当前根目录下将不需要同步的文件和目录写到 `.gitignore` :
-
-	.DS_Store
-	Thumbs.db
-	db.json
-	*.log
-	node_modules/
-	themes/
-	.deploy*/
+```name
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+themes/
+.deploy*/
+```
 
 配置好了之后,保存退出,我们重新执行一下:
-
-	$ hexo clean #清理各种缓存和旧文件
-	$ hexo g     #生成静态文件
+```hexo
+$ hexo clean #清理各种缓存和旧文件
+$ hexo g     #生成静态文件
+```
 
 最后,我们将public目录同步到Github:
-
-	$ hexo d #部署应用
+```hexo
+$ hexo d #部署应用
+```
 
 在执行这个命令的时候,我们可能会出现如下错误：
-
-	$ ERROR Deployer not found: git
-
+```error
+$ ERROR Deployer not found: git
+```
 那是因为我们缺少一个依赖,我们安装一下:
-
-	npm install hexo-deployer-git --save
-
+```npm
+npm install hexo-deployer-git --save
+```
 然后再次执行一下,执行完成我们到Github，神奇的的事发生了，我们的项目多了一个(run-page),这个分支就是我们后面要用来生成我们到静态页面的。
 
 # 部署到Netlify
@@ -185,10 +194,13 @@ categories:
 然后点击创建好的二级域名,成功访问✌️！！！
 
 以后我们写好博客之后,直接执行：
-
-	$ hexo clean 
-	$ hexo g     
-	$ hexo d
+```hexo
+$ hexo clean #清理各种缓存和旧文件
+$ hexo g     #生成静态文件
+$ hexo s     #在本地查看生成网页（取消用ctrl+c）
+$ hexo d     #推送到GitHub
+# 写完blog不需要清除缓存，直接生成静态文件即可
+```
 我们的个人博客就会自动进行刷新,是不是超厉害！！
 
 # 思路
@@ -196,10 +208,13 @@ categories:
 部署完成之后,可能有的同学会觉得很晕,我画了一个部署的流程图：
 ![](13.png)
 这就是我们为什么要利用两个分支的原因,我们将我们的项目分支托管到 `master` ,然后将生成的 `public` 目录,托管到 `run-page` 分支,以后我们可以写完博客以后,就可以直接输入：
-
-	$ hexo clean #清理各种缓存和旧文件
-	$ hexo g     #生成静态文件
-	$ hexo d     #推送到GitHub
+```hexo
+$ hexo clean #清理各种缓存和旧文件
+$ hexo g     #生成静态文件
+$ hexo s     #在本地查看生成网页（取消用ctrl+c）
+$ hexo d     #推送到GitHub
+# 写完blog不需要清除缓存，直接生成静态文件即可
+```
 
 进行我们博客的推送,一旦我们推送到run-page分支,Netlify监测到我们的仓库发生了变化,就会根据这个分支的变化进行实时拉取并部署。
 

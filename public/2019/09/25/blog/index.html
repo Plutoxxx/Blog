@@ -8,12 +8,15 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="我的博客源代码地址
+    <meta name="description" content="
+
+
+主要讲解本blog的搭建过程，如有不详之处，可以联系我，或者在下方评论，我都会解答哒😁。
+
+我的博客源代码地址
 大家有需要的可以star&amp;amp;fork我的博客代码，修改一些配置就可以写文章了。
 快速搭建
-如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：
-
-在根目录配置文件_config.">
+如果你不想重新自定义主题">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -295,7 +298,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -462,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.8k
                 </div>
                 
 
@@ -485,7 +488,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="我的博客源代码地址"><a href="#我的博客源代码地址" class="headerlink" title="我的博客源代码地址"></a>我的博客源代码地址</h1><hr>
+                <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=591241&auto=1&height=66"></iframe></div>
+
+<blockquote>
+<p>主要讲解本blog的搭建过程，如有不详之处，可以联系我，或者在下方评论，我都会解答哒😁。</p>
+</blockquote>
+<h1 id="我的博客源代码地址"><a href="#我的博客源代码地址" class="headerlink" title="我的博客源代码地址"></a>我的博客源代码地址</h1><hr>
 <p>大家有需要的可以star&amp;fork我的<a href="https://github.com/Plutoxxx/Blog" target="_blank" rel="noopener">博客代码</a>，修改一些配置就可以写文章了。</p>
 <h1 id="快速搭建"><a href="#快速搭建" class="headerlink" title="快速搭建"></a>快速搭建</h1><hr>
 <p>如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：</p>
@@ -497,22 +505,25 @@
 </ul>
 <p><strong>当然在个性化设置前环境要先配置好</strong></p>
 <p>平时常用的命令有：</p>
-<pre><code>hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式
-hexo p  =&gt; hexo publish   
-hexo g  =&gt; hexo generate  #生成静态网页
-hexo s  =&gt; hexo server    #启动服务预览
-hexo d  =&gt; hexo deploy    #部署
+<pre class="line-numbers language-java"><code class="language-java">hexo n <span class="token string">"博客名称"</span>  <span class="token operator">=</span><span class="token operator">></span> hexo <span class="token keyword">new</span> <span class="token string">"博客名称"</span>   #这两个都是创建新文章，前者是简写模式
+hexo p  <span class="token operator">=</span><span class="token operator">></span> hexo publish   
+hexo g  <span class="token operator">=</span><span class="token operator">></span> hexo generate  #生成静态网页
+hexo s  <span class="token operator">=</span><span class="token operator">></span> hexo server    #启动服务预览
+hexo d  <span class="token operator">=</span><span class="token operator">></span> hexo deploy    #部署
 hexo clean   #清除缓存，网页正常情况下可以忽略此条命令
-ctrl + c     #关闭本地服务器</code></pre><h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><hr>
+ctrl <span class="token operator">+</span> c     #关闭本地服务器<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><hr>
 <p>首先下载稳定版本<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>。</p>
 <p>安装选项默认就行，一路Next。</p>
 <p>最后安装好之后，按Win+R打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
 <p><strong>添加国内镜像源</strong></p>
 <p>如果没梯子可以使用阿里的国内镜像进行加速</p>
-<pre><code>npm config set registry https://registry.npm.taobao.org</code></pre><h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><hr>
+<pre class="line-numbers language-js"><code class="language-js">npm config <span class="token keyword">set</span> registry https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>registry<span class="token punctuation">.</span>npm<span class="token punctuation">.</span>taobao<span class="token punctuation">.</span>org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><hr>
 <p>安装完Node.js后，打开终端，输入以下命令：</p>
-<pre><code>npm install -g hexo-cli
-hexo -v  #查看是否安装成功</code></pre><p>在合适的位置新建文件夹，用来存放blog文件，比如我的博客文件在 F:\Project\GitHub\Blog 目录下。</p>
+<pre class="line-numbers language-hexo"><code class="language-hexo">npm install -g hexo-cli
+hexo -v  #查看是否安装成功<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在合适的位置新建文件夹，用来存放blog文件，比如我的博客文件在 F:\Project\GitHub\Blog 目录下。</p>
 <p>在该目录下初始化网站，输入 <code>hexo init</code> 初始化文件夹，接着输入 <code>npm install</code> 安装必要组件。 </p>
 <p>到这里，本地网站已经配置结束，输入 <code>hexo g</code> 生成静态网页，然后输入 <code>hexo s</code> 打开本地服务器，</p>
 <p>最后在浏览器中打开: <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就能看到初始化的blog啦。</p>
@@ -533,28 +544,36 @@ hexo -v  #查看是否安装成功</code></pre><p>在合适的位置新建文件
 <p>测试连接 <code>ssh -T git@github.com</code>，弹出警告后，填写yes，然后回车，出现以下则表示成功<br><img src="6.png" alt></p>
 <p>在Blog目录下，右击打开Git，输入命令： <code>git init</code>，会出现一个 <code>.git</code> 文件夹</p>
 <p>在项目根目录下,将你的本地项目和新建的repository联系起来:</p>
-<pre><code>git remote add origin https://github.com/your-name/your-Repository.git</code></pre><p>完成后到根目录下：</p>
-<pre><code>git add .                       # 添加文件到暂缓区
-git commit -m &#39;First commit&#39;    # 将刚刚添加到暂缓区的内容提交到本地仓库.git
-git push --set-upstream origin master #上传到远程仓库(由于是第一次push,所以是这个命令)</code></pre><p>到这里,我们已经将我们的项目推送到GitHub的master分支下面了.接下来我们要对hexo进行一些配置:</p>
+<pre class="line-numbers language-git"><code class="language-git">git remote add origin https://github.com/your-name/your-Repository.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>完成后到根目录下：</p>
+<pre class="line-numbers language-git"><code class="language-git">git add .                       # 添加文件到暂缓区
+git commit -m <span class="token string">'First commit'</span>    # 将刚刚添加到暂缓区的内容提交到本地仓库.git
+git push --set-upstream origin master #上传到远程仓库(由于是第一次push,所以是这个命令)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>到这里,我们已经将我们的项目推送到GitHub的master分支下面了.接下来我们要对hexo进行一些配置:</p>
 <p>打开博客根目录下的_config.yml文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。<br>修改最后一行的配置：</p>
-<pre><code>deploy:
+<pre class="line-numbers language-config"><code class="language-config">deploy:
  type: git #部署方式
  repository: git@github.com:you-name/your-Repository.git #关联github仓库
- branch: run-page #部署分支</code></pre><p>在这里,我们将在这个项目仓库下新建一个run-page分支,至于有什么用,我等一下解释,先跟着我操作起来.</p>
+ branch: run-page #部署分支<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在这里,我们将在这个项目仓库下新建一个run-page分支,至于有什么用,我等一下解释,先跟着我操作起来.</p>
 <p>在当前根目录下将不需要同步的文件和目录写到 <code>.gitignore</code> :</p>
-<pre><code>.DS_Store
+<pre class="line-numbers language-name"><code class="language-name">.DS_Store
 Thumbs.db
 db.json
 *.log
 node_modules/
 themes/
-.deploy*/</code></pre><p>配置好了之后,保存退出,我们重新执行一下:</p>
-<pre><code>$ hexo clean #清理各种缓存和旧文件
-$ hexo g     #生成静态文件</code></pre><p>最后,我们将public目录同步到Github:</p>
-<pre><code>$ hexo d #部署应用</code></pre><p>在执行这个命令的时候,我们可能会出现如下错误：</p>
-<pre><code>$ ERROR Deployer not found: git</code></pre><p>那是因为我们缺少一个依赖,我们安装一下:</p>
-<pre><code>npm install hexo-deployer-git --save</code></pre><p>然后再次执行一下,执行完成我们到Github，神奇的的事发生了，我们的项目多了一个(run-page),这个分支就是我们后面要用来生成我们到静态页面的。</p>
+.deploy*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>配置好了之后,保存退出,我们重新执行一下:</p>
+<pre class="line-numbers language-hexo"><code class="language-hexo">$ hexo clean #清理各种缓存和旧文件
+$ hexo g     #生成静态文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>最后,我们将public目录同步到Github:</p>
+<pre class="line-numbers language-hexo"><code class="language-hexo">$ hexo d #部署应用<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在执行这个命令的时候,我们可能会出现如下错误：</p>
+<pre class="line-numbers language-error"><code class="language-error">$ ERROR Deployer not found: git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>那是因为我们缺少一个依赖,我们安装一下:</p>
+<pre class="line-numbers language-npm"><code class="language-npm">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后再次执行一下,执行完成我们到Github，神奇的的事发生了，我们的项目多了一个(run-page),这个分支就是我们后面要用来生成我们到静态页面的。</p>
 <h1 id="部署到Netlify"><a href="#部署到Netlify" class="headerlink" title="部署到Netlify"></a>部署到Netlify</h1><hr>
 <p>我们先到<a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a>官网注册一下账号,因为我们是将项目托管到GitHub的,所以我们选择GitHub登录：<br><img src="7.png" alt><br>点击网站新建：<br><img src="8.png" alt></p>
 <p>选择GitHub来源：<br><img src="9.png" alt></p>
@@ -565,14 +584,20 @@ $ hexo g     #生成静态文件</code></pre><p>最后,我们将public目录同�
 <p>点击Save,等待Netlify进行热部署即可.</p>
 <p>然后点击创建好的二级域名,成功访问✌️！！！</p>
 <p>以后我们写好博客之后,直接执行：</p>
-<pre><code>$ hexo clean 
-$ hexo g     
-$ hexo d</code></pre><p>我们的个人博客就会自动进行刷新,是不是超厉害！！</p>
+<pre class="line-numbers language-hexo"><code class="language-hexo">$ hexo clean #清理各种缓存和旧文件
+$ hexo g     #生成静态文件
+$ hexo s     #在本地查看生成网页（取消用ctrl+c）
+$ hexo d     #推送到GitHub
+# 写完blog不需要清除缓存，直接生成静态文件即可<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们的个人博客就会自动进行刷新,是不是超厉害！！</p>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><hr>
 <p>部署完成之后,可能有的同学会觉得很晕,我画了一个部署的流程图：<br><img src="13.png" alt><br>这就是我们为什么要利用两个分支的原因,我们将我们的项目分支托管到 <code>master</code> ,然后将生成的 <code>public</code> 目录,托管到 <code>run-page</code> 分支,以后我们可以写完博客以后,就可以直接输入：</p>
-<pre><code>$ hexo clean #清理各种缓存和旧文件
+<pre class="line-numbers language-hexo"><code class="language-hexo">$ hexo clean #清理各种缓存和旧文件
 $ hexo g     #生成静态文件
-$ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦我们推送到run-page分支,Netlify监测到我们的仓库发生了变化,就会根据这个分支的变化进行实时拉取并部署。</p>
+$ hexo s     #在本地查看生成网页（取消用ctrl+c）
+$ hexo d     #推送到GitHub
+# 写完blog不需要清除缓存，直接生成静态文件即可<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>进行我们博客的推送,一旦我们推送到run-page分支,Netlify监测到我们的仓库发生了变化,就会根据这个分支的变化进行实时拉取并部署。</p>
 
             </div>
             <hr />
@@ -1065,7 +1090,7 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CVPR2019目标检测算法总结">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CVPR2019目标检测算法总结">
                         
                         <span class="card-title">CVPR2019目标检测算法总结</span>
                     </div>
@@ -1073,9 +1098,14 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            介绍
+                            
+
+
+介绍一下目标检测主要的优化方向，以及CVPR2019中目标检测相关的论文。
+
+介绍
 目标检测是很多计算机视觉应用的基础，比如实例分割、人体关键点提取、人脸识别等，它结合了目标分类和定位两个任务。
-现代大多数目标检测器的框架是 (two-stage/single-stage)，目标检测被定义为一个多任务学习的过程，主要
+现代大多数目标检测器的框架是 (two
                         
                     </div>
                     <div class="publish-info">
@@ -1124,7 +1154,7 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Hexo-Github-Netlify博客搭建教程">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Hexo-Github-Netlify博客搭建教程">
                         
                         <span class="card-title">Hexo-Github-Netlify博客搭建教程</span>
                     </div>
@@ -1132,12 +1162,15 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的博客源代码地址
+                            
+
+
+主要讲解本blog的搭建过程，如有不详之处，可以联系我，或者在下方评论，我都会解答哒😁。
+
+我的博客源代码地址
 大家有需要的可以star&amp;fork我的博客代码，修改一些配置就可以写文章了。
 快速搭建
-如果你不想重新自定义主题的话，可以直接下载我已经修改过的主题，只要稍微修改一些地方就行：
-
-在根目录配置文件_config.
+如果你不想重新自定义主题
                         
                     </div>
                     <div class="publish-info">
@@ -1335,7 +1368,7 @@ $ hexo d     #推送到GitHub</code></pre><p>进行我们博客的推送,一旦�
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.5k</span>
+            <span class="white-color">4.7k</span>
             
 
             <br>

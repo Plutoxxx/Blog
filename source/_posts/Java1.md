@@ -13,6 +13,9 @@ tags:
 categories:
 - Java
 ---
+<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22822489&auto=1&height=66"></iframe></div>
+
+>主要讲解Java面向对象的基本特性，若有错误之处，望批评指正😆。
 
 # Java面向对象
 ---
@@ -33,11 +36,11 @@ categories:
 局部：没有默认值，要想用，必须手动赋值。
 成员：如果没有赋值，会有默认值，规则和数组一样。
 
-* 内存的位置不一样(了解)
+* 内存的位置不一样(**了解**)
 局部：位于栈内存。
 成员：位于堆内存。
 
-* 生命周期不一样
+* 生命周期不一样(**了解**)
 局部：随着方法进栈而诞生，随着方法的出栈而消失。
 成员：随着对象创建而诞生，随着对象被垃圾回收而消失。
 
@@ -181,10 +184,9 @@ obj instance of class_name;
 ```
 
 ## 四种权限修饰符
-```java
-                    public  >   protected  >  (default)  >  private
-同一个类(我自己)       √            √             √            √
-同一个包(我领居)       √            √             √            ×
-不同包子类(我儿子)     √            √             ×            ×
-不同包非子类（陌生人） √            ×             ×            ×
-```
+|      范围          |public | protected | (\(default\)) | private|
+|------              |------ |----------|------     |------  |
+|同一个类（我自己）     |  √     |    √    |    √   |   √   |
+|同一个包（我领居）     |  √     |    √    |    √   |   ×   |
+|不同包子类（我儿子）   |  √     |    √    |    ×   |   ×   |
+|不同包非子类（陌生人）|  √     |    ×    |    ×   |   ×   |
