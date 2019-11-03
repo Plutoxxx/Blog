@@ -301,7 +301,7 @@ Java面向对象
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -460,14 +460,14 @@ Java面向对象
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
                 
@@ -640,45 +640,114 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
 <pre class="line-numbers language-java"><code class="language-java">obj instance of class_name<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
+<h2 id="Final关键字"><a href="#Final关键字" class="headerlink" title="Final关键字"></a>Final关键字</h2><ol>
+<li><p>final关键字来修饰一个类的时候，表示这个类不能有任何子类，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">class_name</span><span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>final关键字来修饰一个方法时，这个方法是最终方法，不能覆盖重写，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java">修饰符 <span class="token keyword">final</span> 返回值类型 <span class="token function">method_name</span><span class="token punctuation">(</span>type parameter_name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+ 方法体
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>tips：对于类和方法来说，abstract和final关键字不能同时使用，相互矛盾。</p>
+</blockquote>
+</li>
+<li><p>final修饰成员变量时，成员变量不再给默认值，要么直接赋值，要么通过构造方法赋值</p>
+</li>
+</ol>
 <h2 id="四种权限修饰符"><a href="#四种权限修饰符" class="headerlink" title="四种权限修饰符"></a>四种权限修饰符</h2><table>
 <thead>
 <tr>
-<th>范围</th>
-<th>public</th>
-<th>protected</th>
-<th>((default))</th>
-<th>private</th>
+<th align="center">范围</th>
+<th align="center">public</th>
+<th align="center">protected</th>
+<th align="center">((default))</th>
+<th align="center">private</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>同一个类（我自己）</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
+<td align="center">同一个类（我自己）</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
 </tr>
 <tr>
-<td>同一个包（我领居）</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>×</td>
+<td align="center">同一个包（我领居）</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
 </tr>
 <tr>
-<td>不同包子类（我儿子）</td>
-<td>√</td>
-<td>√</td>
-<td>×</td>
-<td>×</td>
+<td align="center">不同包子类（我儿子）</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
 </tr>
 <tr>
-<td>不同包非子类（陌生人）</td>
-<td>√</td>
-<td>×</td>
-<td>×</td>
-<td>×</td>
+<td align="center">不同包非子类（陌生人）</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
 </tr>
 </tbody></table>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><ol>
+<li><p>成员内部类定义格式：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">out_class_name</span><span class="token punctuation">{</span>
+ <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">in_class_name</span><span class="token punctuation">{</span>
+     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>tips：内部类用外部类，随意访问；外部类用内部类，需要内部对象。</p>
+</blockquote>
+<p>新建成员内部类对象：</p>
+<pre class="line-numbers language-java"><code class="language-java">out_class_name<span class="token punctuation">.</span>in_class_name obj <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">out_class_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">in_class_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>局部内部类：只有当前所属的方法才可以使用它，出了这个方法外边就不能用了，格式：</p>
+<pre class="line-numbers language-java"><code class="language-java">修饰符 <span class="token keyword">class</span> <span class="token class-name">out_class_name</span><span class="token punctuation">{</span>
+ 修饰符 返回值类型 <span class="token function">out_method_name</span><span class="token punctuation">(</span>type parameter_name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token keyword">class</span> <span class="token class-name">in_class_name</span><span class="token punctuation">{</span>
+         <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>tips：局部内部类，如果想要访问所在方法的局部变量，那么这个局部变量必须是<strong>有效的final</strong>。这是由于生命周期所决定：</p>
+<ul>
+<li>局部变量，跟着方法→位于栈内存→方法运行结束，立刻出栈，局部变量消失。</li>
+<li>new出来的对象→位于堆内存→对象一直位于堆内存，直到垃圾回收清理。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>使用内部类时，权限修饰符规则：</p>
+</li>
+</ol>
+<ul>
+<li>外部类：(public) / ((default))</li>
+<li>成员内部类：(public) / (protected) / ((default)) / (private)</li>
+<li>局部内部类：什么都不写</li>
+</ul>
+<ol start="4">
+<li><p>匿名内部类：如果接口的实现类（或者是父类的子类）只需要使用唯一的一次，那么这种情况下就可以省略掉该类的定义，而改为使用<strong>匿名内部类</strong>，格式为：</p>
+<pre class="line-numbers language-java"><code class="language-java">Interface_name obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Interface_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true">//覆盖重写全部抽象方法</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>tips：</p>
+<ul>
+<li>匿名内部类在<strong>创建对象</strong>的时候，只能使用<strong>唯一一次</strong></li>
+<li>匿名对象在<strong>调用方法</strong>的时候，只能调用<strong>唯一一次</strong></li>
+<li>匿名内部类省略了<strong>实现类/子类名称</strong>，但是匿名对象省略了<strong>对象名称</strong>。<strong>匿名内部类和匿名对象不是一回事</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
 
             </div>
             <hr />
@@ -1163,18 +1232,17 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/27/java1/">
+                <a href="/2019/11/03/java2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Java基础①">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Java②">
                         
-                        <span class="card-title">Java基础①</span>
+                        <span class="card-title">Java②</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1183,43 +1251,37 @@ Interface_name obj <span class="token operator">=</span> <span class="token keyw
                             
 
 
-主要讲解Java面向对象的基本特性，若有错误之处，望批评指正😆。
+主要总结java中集合相关的知识，若有错误，欢迎更正🤣。
 
-Java面向对象
-对象和封装
-当一个对象作为参数，传递到方法中时，实际上传递的是地址值。
-局部变量、成员变量区别
-
-
-定义的位置不一样(重点)局部：在方法的内部。成
+java集合
+collection常用功能Collection是所有单列集合的父接口，Collection中定义了单列集合（List和Set）通用的一些方法，这些方法可以操
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                    Java
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                    java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
                     <a href="/tags/基础/" target="_blank">
                         <span class="chip bg-color">基础</span>
+                    </a>
+                    
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -1237,7 +1299,7 @@ Java面向对象
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CVPR2019目标检测算法总结">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CVPR2019目标检测算法总结">
                         
                         <span class="card-title">CVPR2019目标检测算法总结</span>
                     </div>
@@ -1445,7 +1507,7 @@ Java面向对象
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.7k</span>
+            <span class="white-color">6.7k</span>
             
 
             <br>

@@ -4,18 +4,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="CVPR2019目标检测算法总结, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
+    <meta name="keywords" content="Java②, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
     <meta name="baidu-site-verification" content="LwAlJwgZgd">
     <meta name="google-site-verification" content="LwAlJwgZgd">
     <meta name="360-site-verification" content>
     <meta name="description" content="
 
 
-介绍一下目标检测主要的优化方向，以及CVPR2019中目标检测相关的论文。
+主要总结java中集合相关的知识，若有错误，欢迎更正🤣。
 
-介绍
-目标检测是很多计算机视觉应用的基础，比如实例分割、人体关键点提取、人脸识别等，它结合了目标分类和定位两个任务。
-现代大多数目标检测器的框架是 (two">
+java集合
+collection常用功能Collection是所有单列集合的父接口，Collection中定义了单列集合（List和Set）通用的一些方法，这些方法可以操">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +22,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>CVPR2019目标检测算法总结 | ArSw的博客</title>
+    <title>Java② | ArSw的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -303,7 +302,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        CVPR2019目标检测算法总结
+                        Java②
                     </div>
                 </div>
             </div>
@@ -414,16 +413,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/DeepLearning/" target="_blank">
-                            <span class="chip bg-color">DeepLearning</span>
+                        <a href="/tags/基础/" target="_blank">
+                            <span class="chip bg-color">基础</span>
                         </a>
                         
-                        <a href="/tags/目标检测/" target="_blank">
-                            <span class="chip bg-color">目标检测</span>
-                        </a>
-                        
-                        <a href="/tags/CVPR/" target="_blank">
-                            <span class="chip bg-color">CVPR</span>
+                        <a href="/tags/java/" target="_blank">
+                            <span class="chip bg-color">java</span>
                         </a>
                         
                     </div>
@@ -434,8 +429,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/paper/" class="post-category" target="_blank">
-                            paper
+                        <a href="/categories/java/" class="post-category" target="_blank">
+                            java
                         </a>
                         
                     </div>
@@ -446,7 +441,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-28
+                    2019-11-03
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -460,7 +455,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
@@ -483,65 +478,118 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=441442&auto=1&height=66"></iframe></div>
+                <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=66"></iframe></div>
 
 <blockquote>
-<p>介绍一下目标检测主要的优化方向，以及CVPR2019中目标检测相关的论文。</p>
+<p>主要总结java中集合相关的知识，若有错误，欢迎更正🤣。</p>
 </blockquote>
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><hr>
-<p>目标检测是很多计算机视觉应用的基础，比如实例分割、人体关键点提取、人脸识别等，它结合了目标分类和定位两个任务。</p>
-<p>现代大多数目标检测器的框架是 (two-stage/single-stage)，目标检测被定义为一个多任务学习的过程，主要包括：</p>
+<h1 id="java集合"><a href="#java集合" class="headerlink" title="java集合"></a>java集合</h1><hr>
+<h2 id="collection常用功能"><a href="#collection常用功能" class="headerlink" title="collection常用功能"></a>collection常用功能</h2><p>Collection是所有单列集合的父接口，Collection中定义了单列集合（List和Set）通用的一些方法，这些方法可以操作所有的单列集合。方法如下：</p>
 <ul>
-<li><p>区分前景物体与背景，并给它们分配恰当的类别标签。</p>
-</li>
-<li><p>回归相应的位置参数，最大化检测框与<strong>GT bounding box</strong>的交并比((IoU))或是其他指标。</p>
+<li><code>public boolean add(E e)</code>: 把给定的对象添加到当前集合中 。</li>
+<li><code>public void clear()</code>: 清空集合中所有的元素。</li>
+<li><code>public boolean remove(E e)</code>: 把给定的对象在当前集合中删除。</li>
+<li><code>public boolean contains(E e)</code>: 判断当前集合中是否包含给定的对象。</li>
+<li><code>public boolean isEmpty()</code>: 判断当前集合是否为空。</li>
+<li><code>public int size()</code>: 返回集合中元素的个数。</li>
+<li><code>public Object[] toArray()</code>: 把集合中的元素，存储到数组中。</li>
+</ul>
+<h2 id="iterator迭代器"><a href="#iterator迭代器" class="headerlink" title="iterator迭代器"></a>iterator迭代器</h2><h3 id="1-迭代的概念"><a href="#1-迭代的概念" class="headerlink" title="1. 迭代的概念"></a>1. 迭代的概念</h3><ul>
+<li><strong>迭代</strong>：Collection集合元素的通用获取方式。在取出元素之前要先判断集合中有没有元素，如果有，就把这个元素取出来，继续判断，如果还有就再取出来。一直把集合中的所有元素全部取出来。这种取出方式专业术语称为迭代。</li>
+</ul>
+<h3 id="2-iterator接口的常用方法"><a href="#2-iterator接口的常用方法" class="headerlink" title="2. iterator接口的常用方法"></a>2. iterator接口的常用方法</h3><ul>
+<li><code>public E next()</code>: 返回迭代的下一个元素。</li>
+<li><code>public boolean hasNext</code>: 如果仍有元素可以迭代，则返回true。</li>
+</ul>
+<h3 id="3-增强for循环"><a href="#3-增强for循环" class="headerlink" title="3. 增强for循环"></a>3. 增强for循环</h3><ul>
+<li>专门用来遍历数组和集合的，内部原理其实是一个Iterator迭代器，所以在遍历的过程中，不能对集合中的元素进行增删操作。格式为：<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>type var <span class="token operator">:</span> collection集合 or 数组<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h1 id="目标检测主要的优化方向"><a href="#目标检测主要的优化方向" class="headerlink" title="目标检测主要的优化方向"></a>目标检测主要的优化方向</h1><hr>
-<p>二维目标检测实现和优化方向包括backbone、IoU、损失函数、NMS、anchor、one shot learning/zero shot learning等。<br><br><strong>基于目标检测的backbone和特征提取</strong><br>目标检测的backbone一般是基于ImageNet预训练的图像分类网络。图像的分类只关注分类以及感受视野，不用关注目标的定位，目标检测同时还要关注图片的空间信息。如果下采样过多，会导致最后的Feature map很小，小目标很容易被忽略。现在很多基础网络，ResNet、MaskR-CNN、DenseNet、FPN、DetNet、RetinNet等能够提取图像的上下文信息，在特征提取上不断优化。<br><br><strong>基于位置回归的优化算法</strong><br>包括UnitBox、IoU-Net，能够预测检测到的边界框和它们对应的GT bounding box之间的IoU，使得该网络能像其分类模块一样，对检测框的定位精确程度有所掌握，神经网络在Backbone引入IoU-Net做边界修订。<br><br><strong>基于优化损失函数的方法</strong><br>主要有Smooth L1 loss、Smooth L2 loss、Focal loss等<br><br><strong>基于优化NMS的方法</strong><br>主要有Soft-NMS,Softer-NMS,以及Relation Netwrok，ConvNMS，NMS Network，Yes-Net等<br><br><strong>基于Anchor生成的算法</strong><br>有Sliding window、Region Proposal Network（RPN）、CornerNet、meta-anchor等。<br><br><strong>One-shot learning以及Zero shot learning</strong><br>都属于迁移学习领域主要研究的是网络少样本精准分类问题，单样本学习能力。</p>
-<h1 id="GIoU"><a href="#GIoU" class="headerlink" title="GIoU"></a>GIoU</h1><hr>
-<p><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Rezatofighi_Generalized_Intersection_Over_Union_A_Metric_and_a_Loss_for_CVPR_2019_paper.pdf" target="_blank" rel="noopener"><strong>论文下载</strong></a></p>
-<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>包围框回归是2D/3D视觉任务中的重要模块，不管是目标检测，目标跟踪，还是实例分割，都依赖于对bounding box进行回归，以获得准确的定位效果。</p>
-<p>其中IoU((Intersection\ over\ Union))是使得包围框回归的重要参数。简单来讲就是模型产生的目标框((Result))与 (GT) 的重叠率。可以理解为检测结果与GT的交集比上它们的并集，公式为：</p>
-<p>$$IoU=\frac{Result\bigcap GT}{Result\bigcup GT}$$</p>
-<p>IoU是目标检测中一个重要的概念，在anchor-based的方法中，他的作用不仅用来确定正样本和负样本，还可以用来评价输出框((predict\ box))和(Ground\ Truth)的距离，或者说(predict\ box)的准确性。IoU有一个好的特性就是对尺度不敏感((scale\ invariant))。</p>
-<p>在regression任务中，判断predict box和gt的距离最直接的指标就是IoU，但所采用的loss却不适合，如图所示，在loss相同的情况下，regression的效果却大不相同，也就是说loss没有体现出regression的效果，而IoU却可以根据不同的情况得到不同的数值，能最直接反应回归效果。</p>
-<p><img src="1.png" alt></p>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><p>本文提出用IoU这个直接指标来指导bounding box的回归。与其用一个代理的损失函数来监督学习，不如直接用指标本身来的好。此时损失函数为：<br>$$L_{IoU}=1-IoU$$</p>
-<p>但是直接使用IoU作为损失函数会出现两个问题:</p>
-<ul>
-<li>如果两个框没有相交，根据定义，IoU=0，不能反映两者的距离大小（重合度）。同时因为loss=0，没有梯度回传，无法进行学习训练。</li>
-<li>IoU无法精确的反映两者的重合度大小。如图所示，三种情况IoU都相等，但看得出来他们的重合度是不一样的，左边的图回归的效果最好，右边的最差。<br><img src="2.png" alt></li>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>List是Collection集合的子接口，不但继承了Collection接口中的方法，而且增加一些根据元素索引来操作集合的特有方法</p>
+<h3 id="1-List接口特点"><a href="#1-List接口特点" class="headerlink" title="1. List接口特点"></a>1. List接口特点</h3><ul>
+<li>它是一个元素存取有序的集合。</li>
+<li>它是一个带有索引的集合，通过索引就可以精确操作集合中的元素</li>
+<li>集合中可以有重复的元素，通过元素的equals方法，来比较是否为重复的元素</li>
 </ul>
-<p>针对IoU的两个缺点，论文提出了一个新的指标<strong>GIoU</strong>((Generalized\ Intersection\ over\ Union))，如图所示：<br><img src="3.png" alt></p>
-<p>GIoU的定义很简单，就是先计算两个框的最小闭包区域面积，再计算IoU，再计算闭包区域中不属于两个框的区域占闭包区域的比重，最后用IoU减去这个比重得到GIoU。GIoU有如下4个特点：</p>
-<ul>
-<li><p>与IoU相似，GIoU也是一种距离度量，作为损失函数的话，满足损失函数的基本要求。$$L_{GIoU}=1-GIoU$$</p>
-</li>
-<li><p>GIoU对scale不敏感。</p>
-</li>
-<li><p>GIoU是IoU的下界，在两个框无线重合的情况下，IoU=GIoU。</p>
-</li>
-<li><p>IoU取值[0,1]，但GIoU有对称区间，取值范围[-1,1]。在两者重合的时候取最大值1，在两者无交集且无限远的时候取最小值-1，因此GIoU是一个非常好的距离度量指标。</p>
-</li>
-<li><p>与IoU只关注重叠区域不同，GIoU不仅关注重叠区域，还关注其他的非重合区域，能更好的反映两者的重合度。</p>
-</li>
+<h3 id="2-List接口中常用方法"><a href="#2-List接口中常用方法" class="headerlink" title="2. List接口中常用方法"></a>2. List接口中常用方法</h3><ul>
+<li><code>public void add(int index, E element)</code>： 将指定的元素，添加到该集合中的指定位置上。</li>
+<li><code>public E get(int index)</code>：返回集合中指定位置的元素。</li>
+<li><code>public E remove(int index)</code>: 移除列表中指定位置的元素, 返回的是被移除的元素。</li>
+<li><code>public E set(int index, E element)</code>：用指定元素替换集合中指定位置的元素,返回值的更新前的元素。</li>
 </ul>
-<p>其实GIoU不仅定义简单，在2D目标检测中计算方式也很简单，计算重合区域和IoU一样，计算最小闭包区域只需要得到两者max和min坐标，坐标围成的矩形就是最小闭包区域。</p>
-<p>GIoU和IoU作为loss的算法如下所示：<br><img src="4.png" alt></p>
-<p>步骤为：</p>
-<ul>
-<li>分别计算GT和Predict Box的面积</li>
-<li>计算Intersection的面积</li>
-<li>计算最小闭包区域面积</li>
-<li>计算IoU和GIoU</li>
-<li>根据公式得到loss</li>
+<h3 id="3-ArrayList集合（List子类）"><a href="#3-ArrayList集合（List子类）" class="headerlink" title="3. ArrayList集合（List子类）"></a>3. ArrayList集合（List子类）</h3><ul>
+<li>数据存储的格式是数组结构。元素增删慢，查找快。</li>
 </ul>
-<h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><p>GIoU loss可以替换掉大多数目标检测算法中bounding box regression，本文选取了Faster R-CNN、Mask R-CNN和YOLO v3 三个方法验证GIoU loss的效果。实验在Pascal VOC和MS COCO数据集上进行。</p>
-<p>效果如下：</p>
-<p><img src="5.png" alt><br><img src="6.png" alt><br><img src="7.png" alt></p>
-<p>可以看出YOLOv3在COCO上有明显涨点，但在其他模型下涨点并不明显，作者也指出了faster rcnn和mask rcnn效果不明显的原因是anchor很密，GIoU发挥作用的情况并不多。</p>
-<p>总体来说，文章的motivation比较好，指出用L1、L2作为regression损失函数的缺点，以及用直接指标IoU作为损失函数的缺陷性，提出新的metric来代替L1、L2损失函数，从而提升regression效果，想法简单粗暴，但work的场景有很大局限性。</p>
+<h3 id="4-LinkList集合（List子类）"><a href="#4-LinkList集合（List子类）" class="headerlink" title="4. LinkList集合（List子类）"></a>4. LinkList集合（List子类）</h3><ul>
+<li>数据存储的结构是链表结构。元素增删快，查询慢。</li>
+<li>里边包含了大量操作首尾元素的方法。</li>
+</ul>
+<ul>
+<li><code>public void addFirst(E e)</code>：将指定元素插入此列表的开头。</li>
+<li><code>public void addLast(E e)</code>：将指定元素添加到此列表的结尾。</li>
+<li><code>public void push(E e)</code>：将元素推入此列表所表示的堆栈。</li>
+<li><code>public E getFirst()</code>：返回此列表的第一个元素。</li>
+<li><code>public E getLast()</code>：返回此列表的最后一个元素。</li>
+<li><code>public E removeFirst()</code>：移除并返回此列表的第一个元素。</li>
+<li><code>public E removeLast()</code>：移除并返回此列表的最后一个元素。</li>
+<li><code>public E pop()</code>:从此列表所表示的堆栈处弹出一个元素。</li>
+<li><code>public boolean isEmpty()</code>：如果列表不包含元素，则返回true。</li>
+</ul>
+<blockquote>
+<p>tips：使用LinkedList集合特有的方法,不能使用多态。</p>
+</blockquote>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>同样继承自Collection接口，与Collection接口中的方法基本一致。</p>
+<h3 id="1-Set接口特点"><a href="#1-Set接口特点" class="headerlink" title="1. Set接口特点"></a>1. Set接口特点</h3><ul>
+<li>不允许存储重复的元素。</li>
+<li>没有索引，没有带索引的方法，也不能用普通的for循环遍历。</li>
+</ul>
+<h3 id="2-HashSet（Set实现）"><a href="#2-HashSet（Set实现）" class="headerlink" title="2. HashSet（Set实现）"></a>2. HashSet（Set实现）</h3><ul>
+<li>根据对象的哈希值来确定元素在集合中的存储位置，因此具有良好的存取和查找性能。保证元素唯一性的方式依赖于hashCode与equals方法。</li>
+</ul>
+<blockquote>
+<p>tips：必须重写hashCode和equals方法。</p>
+</blockquote>
+<h3 id="3-LinkedHashSet（Set实现）"><a href="#3-LinkedHashSet（Set实现）" class="headerlink" title="3. LinkedHashSet（Set实现）"></a>3. LinkedHashSet（Set实现）</h3><ul>
+<li>数据为链表+哈希表组合的存储结构。</li>
+<li>元素放入取出是有顺序的。</li>
+</ul>
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>当方法参数列表已经确定，但是参数个数不确定时，可以用可变参数。格式为：</p>
+<pre class="line-numbers language-java"><code class="language-java">修饰符 返回值类型 <span class="token function">method_name</span><span class="token punctuation">(</span>type <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>var<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    方法体
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<ul>
+<li>一个方法的参数列表，只能有一个参数变量。</li>
+<li>如果方法的参数有多个，那么可变参数必须写在参数列表末尾。</li>
+</ul>
+</blockquote>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="1-Map集合特点"><a href="#1-Map集合特点" class="headerlink" title="1. Map集合特点"></a>1. Map集合特点</h3><ul>
+<li>Map集合是一个双列集合,一个元素包含两个值(一个key,一个value)。</li>
+<li>Map集合中的元素,key和value的数据类型可以相同,也可以不同。</li>
+<li>Map集合中的元素,key是不允许重复的,value是可以重复的。</li>
+<li>Map集合中的元素,key和value是一一对应。</li>
+</ul>
+<h3 id="2-HsahMap（Map实现）"><a href="#2-HsahMap（Map实现）" class="headerlink" title="2. HsahMap（Map实现）"></a>2. HsahMap（Map实现）</h3><ul>
+<li>HashMap集合底层是哈希表:查询的速度特别的快。</li>
+<li>hashMap集合是一个无序的集合,存储元素和取出元素的顺序有可能不一致。</li>
+</ul>
+<h3 id="3-LinkedHashMap（HsahMap实现）"><a href="#3-LinkedHashMap（HsahMap实现）" class="headerlink" title="3. LinkedHashMap（HsahMap实现）"></a>3. LinkedHashMap（HsahMap实现）</h3><ul>
+<li>LinkedHashMap集合底层是哈希表+链表(保证迭代的顺序)。</li>
+<li>LinkedHashMap集合是一个有序的集合,存储元素和取出元素的顺序是一致的。</li>
+</ul>
+<h2 id="JDK9新特性"><a href="#JDK9新特性" class="headerlink" title="JDK9新特性"></a>JDK9新特性</h2><p>List、Set、Map接口:里边增加了一个静态的方法of,可以给集合一次性添加多个元素。</p>
+<ul>
+<li><code>static &lt;E&gt; List&lt;E&gt; of​(E... elements)</code>：一次性添加多个元素。</li>
+</ul>
+<blockquote>
+<ul>
+<li>of方法只适用于List接口，Set接口，Map接口，不适用于接接口的实现类。</li>
+<li>of方法的返回值是一个不能改变的集合，集合不能再使用add，put方法添加元素，否则会抛出异常。</li>
+<li>Set接口和Map接口在调用of方法的时候，不能有重复的元素，否则会抛出异常。</li>
+</ul>
+</blockquote>
 
             </div>
             <hr />
@@ -700,9 +748,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《CVPR2019目标检测算法总结》
+                    《Java②》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/28/cvpr2019/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/03/java2/" property="cc:attributionName"
                rel="cc:attributionURL">
                 ArSw
             </a> 采用
@@ -743,7 +791,7 @@
         repo: 'Blog',
         owner: 'Plutoxxx',
         admin: "Plutoxxx",
-        id: '2019/09/28/cvpr2019/',
+        id: '2019/11/03/java2/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1026,9 +1074,70 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/11/03/java2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Java②">
+                        
+                        <span class="card-title">Java②</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+
+
+主要总结java中集合相关的知识，若有错误，欢迎更正🤣。
+
+java集合
+collection常用功能Collection是所有单列集合的父接口，Collection中定义了单列集合（List和Set）通用的一些方法，这些方法可以操
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category" target="_blank">
+                                    java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/基础/" target="_blank">
+                        <span class="chip bg-color">基础</span>
+                    </a>
+                    
+                    <a href="/tags/java/" target="_blank">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/10/27/java1/">
                     <div class="card-image">
@@ -1057,9 +1166,9 @@ Java面向对象
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1081,75 +1190,6 @@ Java面向对象
                     
                     <a href="/tags/基础/" target="_blank">
                         <span class="chip bg-color">基础</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/25/blog/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Hexo-Github-Netlify博客搭建教程">
-                        
-                        <span class="card-title">Hexo-Github-Netlify博客搭建教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-
-
-主要讲解本blog的搭建过程，如有不详之处，可以联系我，或者在下方评论，我都会解答哒😁。
-
-我的博客源代码地址
-大家有需要的可以star&amp;fork我的博客代码，修改一些配置就可以写文章了。
-快速搭建
-如果你不想重新自定义主题
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/环境搭建/" class="post-category" target="_blank">
-                                    环境搭建
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/GitHub/" target="_blank">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                    <a href="/tags/Netlify/" target="_blank">
-                        <span class="chip bg-color">Netlify</span>
-                    </a>
-                    
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>
