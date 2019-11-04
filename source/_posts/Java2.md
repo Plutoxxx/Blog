@@ -8,16 +8,16 @@ date: 2019-11-03 14:53:35
 password:
 summary:
 tags:
-- java
+- Java
 - 基础
 categories:
-- java
+- Java
 ---
 <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=66"></iframe></div>
 
->主要总结java中集合相关的知识，若有错误，欢迎更正🤣。
+>主要总结Java中集合相关的知识，若有错误，欢迎更正🤣。
 
-# java集合
+# Java集合
 ---
 
 ## collection常用功能

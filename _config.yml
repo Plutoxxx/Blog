@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://yangting.online
+url: https://www.yangting.online
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -141,6 +141,6 @@ live2d:
 
 baidu_url_submit:
   count: 100
-  host: yangting.com
-  token: 
+  host: www.yangting.online
+  token: EvGUpVo4IBdNDDIS
   path: baidu_urls.txt
