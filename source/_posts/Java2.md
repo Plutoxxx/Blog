@@ -1,5 +1,5 @@
 ---
-title: Java②
+title: Java基础②
 top: false
 cover: false
 toc: true
