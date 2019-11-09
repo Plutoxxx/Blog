@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>PyCharm</title>
+      <link href="/2019/11/09/pycharm/"/>
+      <url>/2019/11/09/pycharm/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>主要讲解PyCharm远程连接服务器时的相关配置😝。</p></blockquote><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><hr><p>基本上我们使用PyCharm都是在本地进行开发，但是当我们需要在服务器上调试代码时咋办呢？一种是将服务器上的程序下载到本地，调试编写完后上传，这种方法可行，但是每次都要上传下载，较为繁琐。另一种方法就是利用PyCharm远程调试代码咯，只需稍稍配置一下就能实现。</p><h1 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h1><hr><h2 id="SFTP配置"><a href="#SFTP配置" class="headerlink" title="SFTP配置"></a>SFTP配置</h2><p>打开PyCharm，选择<code>Tools/Deployment/Configuration</code>选项<br><img src="1.png" alt><br>配置连接服务器<br><img src="2.png" alt><br>点击<code>Test Connection</code>，显示成功，表明配置正确<br><img src="7.png" alt><br>选择文件传输对应的位置<br><img src="3.png" alt><br>选择不需要同步的文件<br><img src="4.png" alt><br>文件可以手动上传，也可以自动上传<br><img src="10.png" alt></p><h2 id="Interpreter配置"><a href="#Interpreter配置" class="headerlink" title="Interpreter配置"></a>Interpreter配置</h2><p>打开<code>File/Settings/Project Interpreter</code>选项，点击<code>add</code><br><img src="5.png" alt><br>添加服务器解释器<br><img src="6.png" alt><br>选择解释器的位置，以及文件夹的映射关系<br><img src="8.png" alt><br>解释器配置完成后就能看到环境下包含的<code>package</code><br><img src="9.png" alt><br>此时就能愉快的使用PyCharm进行<code>DeBug</code>啦!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PyCharm </tag>
+            
+            <tag> 服务器配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java基础②</title>
       <link href="/2019/11/03/java2/"/>
       <url>/2019/11/03/java2/</url>

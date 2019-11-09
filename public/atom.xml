@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yangting.online/"/>
-  <updated>2019-11-04T11:49:27.128Z</updated>
+  <updated>2019-11-09T07:57:04.023Z</updated>
   <id>https://www.yangting.online/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PyCharm</title>
+    <link href="https://www.yangting.online/2019/11/09/pycharm/"/>
+    <id>https://www.yangting.online/2019/11/09/pycharm/</id>
+    <published>2019-11-09T05:39:19.000Z</published>
+    <updated>2019-11-09T07:57:04.023Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;主要讲解PyCharm远程连接服务器时的相关配置😝。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="环境配置" scheme="https://www.yangting.online/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="PyCharm" scheme="https://www.yangting.online/tags/PyCharm/"/>
+    
+      <category term="服务器配置" scheme="https://www.yangting.online/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Java基础②</title>
