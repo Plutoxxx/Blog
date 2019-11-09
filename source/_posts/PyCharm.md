@@ -1,5 +1,5 @@
 ---
-title: PyCharm
+title: PyCharm配置远程连接
 top: false
 cover: false
 toc: true
@@ -11,7 +11,7 @@ tags:
 - PyCharm
 - 服务器配置
 categories:
-- 环境配置
+- 环境搭建
 ---
 
 >主要讲解PyCharm远程连接服务器时的相关配置😝。
