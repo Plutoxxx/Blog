@@ -1,7 +1,7 @@
 ---
 title: Java基础③
 top: false
-cover: false
+cover: true
 toc: true
 mathjax: true
 date: 2019-12-01 19:50:44
@@ -13,6 +13,7 @@ tags:
 categories:
 - Java
 ---
+<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=555142&auto=1&height=66"></iframe></div>
 
 >主要总结IO流等相关的知识🤪
 

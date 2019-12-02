@@ -1,7 +1,7 @@
 ---
 title: Hexo-Github-Netlify博客搭建教程
-top: false
-cover: false
+top: true
+cover: true
 toc: true
 mathjax: true
 date: 2019-09-25 08:27:14

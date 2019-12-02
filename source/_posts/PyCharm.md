@@ -1,6 +1,6 @@
 ---
 title: PyCharm配置远程连接
-top: false
+top: true
 cover: false
 toc: true
 mathjax: true

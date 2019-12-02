@@ -199,9 +199,9 @@ mySkills:
     Python:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
       percent: 90%
-    C:
-      background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
-      percent: 80%
+    # C:
+    #   background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
+    #   percent: 80%
     Tensorflow:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
       percent: 80%
@@ -211,9 +211,9 @@ mySkills:
     Linux:
       background: 'linear-gradient(to right, #F12F12 0%, #F6464F 100%)'
       percent: 60%
-    # Java:
-    #   background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-    #   percent: 50%
+    Java:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 50%
     # SQL:
     #   background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
     #   percent: 50%
