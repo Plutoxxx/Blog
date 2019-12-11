@@ -1,7 +1,7 @@
 ---
 title: OpenCV
 top: false
-cover: false
+cover: true
 toc: true
 mathjax: true
 date: 2019-12-08 21:09:20
@@ -14,13 +14,17 @@ categories:
 - 图像
 ---
 
-# 图像基本操作
-**环境配置地址**
+>主要讲解python中OpenCV的相关函数🙈
+
+# 环境配置地址
+---
 - Anaconda:https://www.anaconda.com/download/
 - Python_whl:https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv
 - pyCharm：https://www.jetbrains.com/pycharm/
 
-**数据读取-图像**
+# 图像读取-显示-保存
+---
+## 数据读取-图像
 - cv2.IMREAD_COLOR：彩色图像
 - cv2.IMREAD_GRAYSCALE：灰度图像
 
@@ -34,7 +38,7 @@ img = cv2.imread("1.jpg", cv2.IMREAD_COLOR)
 img2 =cv2.imread('2.jpg',cv2.IMREAD_GRAYSCALE)
 ```
 
-**图像的显示**
+## 图像的显示
 
 ```python
 #图像的显示,也可以创建多个窗口
@@ -44,14 +48,14 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-**图像的保存**
+## 图像的保存
 
 ```python
 #保存
 cv2.imwrite('my_img.jpg',img)
 ```
 
-**数据读取-视频**
+## 数据读取-视频
 - cv2.VideoCapture可以捕获摄像头，用数字来控制不同的设备，例如0,1。
 - 如果是视频文件，直接指定好路径即可。
 
@@ -79,7 +83,7 @@ vc.release()
 cv2.destroyAllWindows()
 ```
 
-**截取部分图像数据**
+## 截取部分图像数据
 
 ```python
 def cv_show(name,img):
@@ -91,7 +95,7 @@ img=cv2.imread('cat.jpg')
 cat=img[0:50,0:200] 
 cv_show('cat',cat)
 ```
-**颜色通道提取**
+## 颜色通道提取
 
 ```python
 b,g,r=cv2.split(img)
@@ -110,7 +114,7 @@ cur_img[:,:,1] = 0
 cur_img[:,:,2] = 0
 ```
 
-**图像的融合**
+## 图像的融合
 
 ```python
 img_bear = cv2.imread("1.jpg")
@@ -125,7 +129,7 @@ plt.imshow(res)
 ```
 ![](1.png)
 
-**图像尺寸设置**
+## 图像尺寸设置
 - x轴变为两倍
 
 ```python
@@ -141,8 +145,11 @@ plt.imshow(res)
 ```
 ![](3.png)
 
-**图像阈值**
-**ret, dst = cv2.threshold（src, thresh, maxval, type）**
+# 图像处理
+---
+
+## 图像阈值
+`ret, dst = cv2.threshold(src, thresh, maxval, type)`
 - src： 输入图，只能输入单通道图像，通常来说为灰度图
 - dst： 输出图
 - thresh： 阈值
@@ -177,7 +184,7 @@ plt.show()
 
 ![](4.png)
 
-**图像平滑**
+## 图像平滑
 ```python
 img = cv2.imread("lenaNoise.png")
 plt.imshow(img[:,:,(2,1,0)])
@@ -208,8 +215,8 @@ plt.imshow(res[:,:,(2,1,0)])
 
 ![](7.png)
 
-**形态学-腐蚀**
-
+## 形态学处理
+### 腐蚀
 ```python
 img = cv2.imread('dige.png')
 kernel = np.ones((30,30), np.uint8)
@@ -221,7 +228,7 @@ plt.imshow(res[:,:,(2,1,0)])
 ```
 ![](8.png)
 
-**形态学-膨胀**
+### 膨胀
 
 ```python
 pie = cv2.imread('pie.png')
@@ -234,7 +241,7 @@ plt.imshow(res[:,:,(2,1,0)])
 ```
 ![](9.png)
 
-**开运算和闭运算**
+### 开运算和闭运算
 
 ```python
 # 开：先腐蚀，再膨胀
@@ -253,7 +260,7 @@ plt.imshow(closing)
 ```
 ![](11.png)
 
-**礼帽和黑帽**
+### 礼帽和黑帽
 - 礼帽 = 原始输入-开运算结果
 - 黑帽 = 闭运算-原始输入
 
@@ -262,15 +269,21 @@ plt.imshow(closing)
 img = cv2.imread('dige.png')
 tophat = cv2.morphologyEx(img, cv2.MORPH_TOPHAT, kernel)
 plt.imshow(tophat)
+```
+![](19.png)
+```python
 #黑帽
 img = cv2.imread('dige.png')
 blackhat  = cv2.morphologyEx(img,cv2.MORPH_BLACKHAT, kernel)
 plt.imshow(tophat)
 ```
+![](20.png)
 
-**图像梯度-Sobel算子**
+## 图像梯度
+
+### Sobel算子
 ![](sobel_1.png)
-dst = cv2.Sobel（src, ddepth, dx, dy, ksize）
+`dst = cv2.Sobel(src, ddepth, dx, dy, ksize)`
 - ddepth:图像的深度
 - dx和dy分别表示水平和竖直方向
 - ksize是Sobel算子的大小
@@ -294,9 +307,9 @@ plt.imshow(sobelxy)
 ```
 ![](13.png)
 
-**图像梯度-Scharr算子**
+### Scharr算子
 ![](scharr.jpg)
-**图像梯度-laplacian算子**
+### laplacian算子
 ![](l.png)
 
 ```python
@@ -319,8 +332,9 @@ laplacian = cv2.convertScaleAbs(laplacian)
 res = np.hstack((sobelxy,scharrxy,laplacian))
 plt.imshow(res)
 ```
-<!-- ![](l4.png) -->
-**Canny边缘检测**
+![](14.png)
+
+## Canny边缘检测
 - 1) 使用高斯滤波器，以平滑图像，滤除噪声。
 - 2) 计算图像中每个像素点的梯度强度和方向。
 - 3) 应用非极大值（Non-Maximum Suppression）抑制，以消除边缘检测带来的杂散响应。
@@ -344,8 +358,10 @@ res = np.hstack((v1,v2))
 plt.imshow(res)
 # cv_show(res, 'res')
 ```
+![](21.png)
 
-**图像金字塔**
+## 图像金字塔
+
 * 高斯金字塔
 * 拉普拉斯金字塔
 ![](Pyramid_1.png)
@@ -368,8 +384,8 @@ cv_show(up_down,'up_down')
 ```
 ![](15.png)
 
-**图像轮廓**
-**cv2.findContours（img,mode,method）**
+## 图像轮廓
+`cv2.findContours(img,mode,method)`
 
 mode:轮廓检索模式
 * RETR_EXTERNAL ：只检索最外面的轮廓；
@@ -395,8 +411,10 @@ draw_img = img.copy()
 res = cv2.drawContours(draw_img, contours, -1, (0, 255, 0), 2)
 cv_show(res, 'res')
 ```
+![](18.png)
 
-**绘制边界矩形**
+## 绘制边界
+### 绘制边界矩形
 ```python
 img = cv2.imread('contours.png')
 
@@ -408,8 +426,9 @@ cnt = contours[2]
 x,y,w,h = cv2.boundingRect(cnt)
 img = cv2.rectangle(img, (x,y), (x+w,y+h), (0, 255, 0), 2)
 ```
+![](16.png)
 
-**绘制边界圆**
+### 绘制边界圆
 ```python
 (x,y),radius = cv2.minEnclosingCircle(cnt) 
 center = (int(x),int(y)) 
@@ -417,3 +436,257 @@ radius = int(radius)
 img = cv2.circle(img,center,radius,(0,255,0),2)
 cv_show(img,'img')
 ```
+![](17.png)
+
+# 模板匹配
+
+模板匹配和卷积原理很像，模板在原图像上从原点开始滑动，计算模板与（图像被模板覆盖的地方）的差别程度，这个差别程度的计算方法在opencv里有6种，然后将每次计算的结果放入一个矩阵里，作为结果输出。假如原图形是AxB大小，而模板是axb大小，则输出结果的矩阵是`(A-a+1)x(B-b+1)`
+
+`cv2.matchTemplate(img, template, method)`
+- TM_SQDIFF：计算平方不同，计算出来的值越小，越相关        
+- TM_CCORR：计算相关性，计算出来的值越大，越相关
+- TM_CCOEFF：计算相关系数，计算出来的值越大，越相关
+- TM_SQDIFF_NORMED：计算归一化平方不同，计算出来的值越接近0，越相关
+- TM_CCORR_NORMED：计算归一化相关性，计算出来的值越接近1，越相关
+- TM_CCOEFF_NORMED：计算归一化相关系数，计算出来的值越接近1，越相关
+一般是使用有归一化的方法。[相应公式](https://docs.opencv.org/3.3.1/df/dfb/group__imgproc__object.html#ga3a7850640f1fe1f58fe91a2d7583695d)
+
+```python
+# 模板匹配
+img = cv2.imread('lena.jpg', 0)
+template = cv2.imread('face.jpg', 0)
+h, w = template.shape[:2]
+methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
+           'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+for meth in methods:
+    img2 = img.copy()
+
+    # 匹配方法的真值
+    method = eval(meth)
+    print (method)
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+
+    # 如果是平方差匹配TM_SQDIFF或归一化平方差匹配TM_SQDIFF_NORMED，取最小值
+    if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
+        top_left = min_loc
+    else:
+        top_left = max_loc
+    bottom_right = (top_left[0] + w, top_left[1] + h)
+
+    # 画矩形
+    cv2.rectangle(img2, top_left, bottom_right, 255, 2)
+
+    plt.subplot(121), plt.imshow(res, cmap='gray')# 匹配的结果
+    plt.xticks([]), plt.yticks([])  # 隐藏坐标轴
+    plt.subplot(122), plt.imshow(img2, cmap='gray')# 在原图中画出匹配的结果
+    plt.xticks([]), plt.yticks([])
+    plt.suptitle(meth)
+    plt.show()
+```
+![](output_13_1.png)
+![](output_13_3.png)
+![](output_13_5.png)
+![](output_13_7.png)
+![](output_13_9.png)
+![](output_13_11.png)
+
+## 匹配多个对象
+```python
+img_rgb = cv2.imread('mario.jpg')
+img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+template = cv2.imread('mario_coin.jpg', 0)
+h, w = template.shape[:2]
+
+res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
+threshold = 0.8
+# 取匹配程度大于%80的坐标
+loc = np.where(res >= threshold)
+for pt in zip(*loc[::-1]):  # *号表示可选参数
+    bottom_right = (pt[0] + w, pt[1] + h)
+    cv2.rectangle(img_rgb, pt, bottom_right, (0, 0, 255), 2)
+cv2.imshow('img_rgb', img_rgb)
+cv2.waitKey(0)
+```
+![](22.png)
+
+# 直方图
+![](hist_1.png)
+`cv2.calcHist(images,channels,mask,histSize,ranges)`
+- images: 原图像图像格式为 uint8 或 ﬂoat32。当传入函数时应用中括号[]括，例如[img]
+- channels: 同样用中括号括来它会告函数我们统幅图像的直方图。如果入图像是灰度图它的值就是[0]如果是彩色图像的传入的参数可以是[0][1][2]它们分别对应着BGR。
+- mask: 掩模图像。统整幅图像的直方图就把它为None。但是如果你想统图像某一分的直方图的你就制作一个掩模图像并 使用它。
+- histSize:BIN的数目。也应用中括号括
+- ranges: 像素值范围常为[0-256]
+```python
+img = cv2.imread('cat.jpg',0) #0表示灰度图
+hist = cv2.calcHist([img],[0],None,[256],[0,256])
+# ravel()是将二维矩阵展成一维数组
+plt.hist(img.ravel(),256); 
+plt.show()
+```
+![](23.png)
+```python
+img = cv2.imread('cat.jpg') 
+color = ('b','g','r')
+for i,col in enumerate(color): 
+    histr = cv2.calcHist([img],[i],None,[256],[0,256]) 
+    plt.plot(histr,color = col) 
+    plt.xlim([0,256])
+```
+![](24.png)
+```python
+# 创建mast
+img = cv2.imread('cat.jpg') 
+mask = np.zeros(img.shape[:2], np.uint8)
+mask[100:300, 100:400] = 255
+img = cv2.imread('cat.jpg', 0)
+masked_img = cv2.bitwise_and(img, img, mask=mask)#与操作
+hist_full = cv2.calcHist([img], [0], None, [256], [0, 256])
+hist_mask = cv2.calcHist([img], [0], mask, [256], [0, 256])
+plt.subplot(221), plt.imshow(img, 'gray')
+plt.subplot(222), plt.imshow(mask, 'gray')
+plt.subplot(223), plt.imshow(masked_img, 'gray')
+plt.subplot(224), plt.plot(hist_full), plt.plot(hist_mask)
+plt.xlim([0, 256])
+plt.show()
+```
+![](25.png)
+
+## 直方图均衡化
+```python
+img = cv2.imread('clahe.jpg',0) #0表示灰度图 #clahe
+plt.hist(img.ravel(),256); 
+plt.show()
+```
+![](26.png)
+```python
+equ = cv2.equalizeHist(img) 
+plt.hist(equ.ravel(),256)
+plt.show()
+```
+![](27.png)
+```python
+res = np.hstack((img,equ))
+cv_show('res',res)
+```
+![](28.png)
+
+## 自适应直方图均值化
+```python
+clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8)) 
+res_clahe = clahe.apply(img)
+res = np.hstack((img,equ,res_clahe))
+cv_show('res',res)
+```
+![](29.png)
+
+# 傅里叶变化
+
+我们生活在时间的世界中，早上7:00起来吃早饭，8:00去挤地铁，9:00开始上班。。。以时间为参照就是时域分析。
+但是在频域中一切都是静止的！
+[傅里叶变化讲解](https://zhuanlan.zhihu.com/p/19763358)
+
+**傅里叶变换的作用**
+- 高频：变化剧烈的灰度分量，例如边界
+- 低频：变化缓慢的灰度分量，例如一片大海
+
+**滤波**
+- 低通滤波器：只保留低频，会使得图像模糊
+- 高通滤波器：只保留高频，会使得图像细节增强
+
+**傅里叶变化步骤**
+- opencv中主要就是cv2.dft()和cv2.idft()，输入图像需要先转换成np.float32 格式。
+- 得到的结果中频率为0的部分会在左上角，通常要转换到中心位置，可以通过shift变换来实现。
+- cv2.dft()返回的结果是双通道的（实部，虚部），通常还需要转换成图像格式才能展示（0,255）。
+
+```python
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
+
+img = cv2.imread('lena.jpg',0)
+# 将输入图像需要先转换成np.float32 格式
+img_float32 = np.float32(img)
+
+dft = cv2.dft(img_float32, flags = cv2.DFT_COMPLEX_OUTPUT)
+# 通过shift变换，将结果转换到中心位置
+dft_shift = np.fft.fftshift(dft)
+# 得到灰度图能表示的形式
+magnitude_spectrum = 20*np.log(cv2.magnitude(dft_shift[:,:,0],dft_shift[:,:,1]))
+
+plt.subplot(121),plt.imshow(img, cmap = 'gray')
+plt.title('Input Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(magnitude_spectrum, cmap = 'gray')
+plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
+plt.show()
+```
+![](30.png)
+
+## 低通滤波器
+
+```python
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
+
+img = cv2.imread('lena.jpg',0)
+
+img_float32 = np.float32(img)
+
+dft = cv2.dft(img_float32, flags = cv2.DFT_COMPLEX_OUTPUT)
+dft_shift = np.fft.fftshift(dft)
+
+rows, cols = img.shape
+crow, ccol = int(rows/2) , int(cols/2)     # 中心位置
+
+# 低通滤波
+mask = np.zeros((rows, cols, 2), np.uint8)
+mask[crow-30:crow+30, ccol-30:ccol+30] = 1
+
+# IDFT
+fshift = dft_shift*mask
+f_ishift = np.fft.ifftshift(fshift)
+img_back = cv2.idft(f_ishift)
+img_back = cv2.magnitude(img_back[:,:,0],img_back[:,:,1])
+
+plt.subplot(121),plt.imshow(img, cmap = 'gray')
+plt.title('Input Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(img_back, cmap = 'gray')
+plt.title('Result'), plt.xticks([]), plt.yticks([])
+
+plt.show()
+```
+![](31.png)
+
+## 高通滤波器
+
+```python
+img = cv2.imread('lena.jpg',0)
+
+img_float32 = np.float32(img)
+
+dft = cv2.dft(img_float32, flags = cv2.DFT_COMPLEX_OUTPUT)
+dft_shift = np.fft.fftshift(dft)
+
+rows, cols = img.shape
+crow, ccol = int(rows/2) , int(cols/2)     # 中心位置
+
+# 高通滤波
+mask = np.ones((rows, cols, 2), np.uint8)
+mask[crow-30:crow+30, ccol-30:ccol+30] = 0
+
+# IDFT
+fshift = dft_shift*mask
+f_ishift = np.fft.ifftshift(fshift)
+img_back = cv2.idft(f_ishift)
+img_back = cv2.magnitude(img_back[:,:,0],img_back[:,:,1])
+
+plt.subplot(121),plt.imshow(img, cmap = 'gray')
+plt.title('Input Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(img_back, cmap = 'gray')
+plt.title('Result'), plt.xticks([]), plt.yticks([])
+
+plt.show()
+```
+![](32.png)

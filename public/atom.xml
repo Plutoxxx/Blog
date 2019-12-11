@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yangting.online/"/>
-  <updated>2019-12-08T15:04:59.118Z</updated>
+  <updated>2019-12-11T13:57:37.091Z</updated>
   <id>https://www.yangting.online/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.yangting.online/2019/12/08/opencv/"/>
     <id>https://www.yangting.online/2019/12/08/opencv/</id>
     <published>2019-12-08T13:09:20.000Z</published>
-    <updated>2019-12-08T15:04:59.118Z</updated>
+    <updated>2019-12-11T13:57:37.091Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,10 @@
       
         
         
-          &lt;h1 id=&quot;图像基本操作&quot;&gt;&lt;a href=&quot;#图像基本操作&quot; class=&quot;headerlink&quot; title=&quot;图像基本操作&quot;&gt;&lt;/a&gt;图像基本操作&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;环境配置地址&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Anaconda:&lt;a
+          &lt;blockquote&gt;
+&lt;p&gt;主要讲解python中OpenCV的相关函数🙈&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;环境配置地址&quot;&gt;&lt;a href=&quot;#环境配置地址&quot; class=&quot;headerlink&quot;
         
       
     
@@ -51,7 +52,7 @@
     <link href="https://www.yangting.online/2019/12/01/java3/"/>
     <id>https://www.yangting.online/2019/12/01/java3/</id>
     <published>2019-12-01T11:50:44.000Z</published>
-    <updated>2019-12-08T13:05:12.108Z</updated>
+    <updated>2019-12-11T13:55:09.761Z</updated>
     
     <summary type="html">
     
@@ -79,7 +80,7 @@
     <link href="https://www.yangting.online/2019/11/09/pycharm/"/>
     <id>https://www.yangting.online/2019/11/09/pycharm/</id>
     <published>2019-11-09T05:39:19.000Z</published>
-    <updated>2019-12-08T13:05:12.111Z</updated>
+    <updated>2019-12-02T01:15:57.230Z</updated>
     
     <summary type="html">
     
@@ -107,7 +108,7 @@
     <link href="https://www.yangting.online/2019/11/03/java2/"/>
     <id>https://www.yangting.online/2019/11/03/java2/</id>
     <published>2019-11-03T06:53:35.000Z</published>
-    <updated>2019-11-08T10:50:33.894Z</updated>
+    <updated>2019-11-04T11:49:27.128Z</updated>
     
     <summary type="html">
     
@@ -135,7 +136,7 @@
     <link href="https://www.yangting.online/2019/10/27/java1/"/>
     <id>https://www.yangting.online/2019/10/27/java1/</id>
     <published>2019-10-27T09:30:46.000Z</published>
-    <updated>2019-11-03T08:32:36.418Z</updated>
+    <updated>2019-11-04T00:26:50.449Z</updated>
     
     <summary type="html">
     
@@ -163,7 +164,7 @@
     <link href="https://www.yangting.online/2019/09/28/cvpr2019/"/>
     <id>https://www.yangting.online/2019/09/28/cvpr2019/</id>
     <published>2019-09-28T00:22:19.000Z</published>
-    <updated>2019-10-29T09:45:17.198Z</updated>
+    <updated>2019-10-29T07:21:30.065Z</updated>
     
     <summary type="html">
     
@@ -193,7 +194,7 @@
     <link href="https://www.yangting.online/2019/09/25/blog/"/>
     <id>https://www.yangting.online/2019/09/25/blog/</id>
     <published>2019-09-25T00:27:14.000Z</published>
-    <updated>2019-12-08T13:05:12.088Z</updated>
+    <updated>2019-12-02T01:13:12.261Z</updated>
     
     <summary type="html">
     

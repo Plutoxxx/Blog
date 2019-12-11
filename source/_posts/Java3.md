@@ -1,7 +1,7 @@
 ---
 title: Java基础③
 top: false
-cover: true
+cover: false
 toc: true
 mathjax: true
 date: 2019-12-01 19:50:44
