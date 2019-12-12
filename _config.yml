@@ -110,10 +110,19 @@ theme: matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# 上传到github
 deploy:
 - type: git
   repository: git@github.com:Plutoxxx/Blog.git
   branch: run-page
+# 上传到腾讯云cos
+# deploy: 
+- type: cos
+  appId: 1300514593
+  secretId: AKIDd4TpnpKBC1cy43vIUUHpAF6j8HApmNKA
+  secretKey: oMegV3MUJtEKBoFSQEoKoBKEk06ybz83
+  bucket: blog-1300514593
+  region: ap-shanghai
 # - type: coding
 #   repository: https://git.coding.net/godweiyang/godweiyang.github.io.git
 #   branch: master
