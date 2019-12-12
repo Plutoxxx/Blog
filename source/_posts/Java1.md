@@ -1,5 +1,6 @@
 ---
 title: Java基础①
+img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/2.jpg
 top: false
 cover: false
 toc: true

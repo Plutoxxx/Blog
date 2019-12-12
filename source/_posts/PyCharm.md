@@ -1,5 +1,6 @@
 ---
 title: PyCharm配置远程连接
+img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/8.jpg
 top: true
 cover: false
 toc: true
