@@ -119,8 +119,8 @@ deploy:
 # deploy: 
 # - type: cos
 #   appId: 1300514593
-#   secretId: AKIDd4TpnpKBC1cy43vIUUHpAF6j8HApmNKA
-#   secretKey: oMegV3MUJtEKBoFSQEoKoBKEk06ybz83
+#   secretId: 
+#   secretKey: 
 #   bucket: blog-1300514593
 #   region: ap-shanghai
 # - type: coding
