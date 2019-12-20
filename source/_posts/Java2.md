@@ -1,6 +1,6 @@
 ---
 title: Java基础②
-img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/3.jpg
+<!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/3.jpg -->
 top: false
 cover: false
 toc: true

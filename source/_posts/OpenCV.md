@@ -1,6 +1,6 @@
 ---
 title: OpenCV
-img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/9.jpg
+<!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/9.jpg -->
 top: false
 cover: true
 toc: true
@@ -16,13 +16,14 @@ categories:
 ---
 <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=531943&auto=1&height=66"></iframe></div>
 
->主要讲解python中OpenCV的相关函数🙈
+>主要讲解python中OpenCV的相关函数🙈，使用的~~OpenCV3~~OpenCV4版本
 
 # 环境配置地址
 ---
-- Anaconda:https://www.anaconda.com/download/
-- Python_whl:https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv
-- pyCharm：https://www.jetbrains.com/pycharm/
+- [Anaconda](https://www.anaconda.com/download/)
+- [Python_whl](https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv)
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+
 
 # 图像读取-显示-保存
 ---
