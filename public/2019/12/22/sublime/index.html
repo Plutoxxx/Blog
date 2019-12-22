@@ -4,14 +4,20 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Sublime插件推荐, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
+    <meta name="keywords" content="Sublime插件, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
     <meta name="baidu-site-verification" content="BNyJmpwbrh">
     <meta name="google-site-verification" content="BNyJmpwbrh">
     <meta name="360-site-verification" content>
     <meta name="description" content="
 推荐一下好用的Sublime插件，打造适合自己的编辑器😁。
 
-">
+Plain Tasks
+
+
+官方文档
+
+今日事今日毕，使用Plain Tasks可以很方便的规划自己的任务。
+配置步骤Shift+Ctrl+P调出命令行,输入Package ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +25,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Sublime插件推荐 | ArSw的博客</title>
+    <title>Sublime插件 | ArSw的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,13 +299,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Sublime插件推荐
+                        Sublime插件
                     </div>
                 </div>
             </div>
@@ -452,14 +458,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    20
+                    777
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -478,6 +484,96 @@
                 <blockquote>
 <p>推荐一下好用的Sublime插件，打造适合自己的编辑器😁。</p>
 </blockquote>
+<h1 id="Plain-Tasks"><a href="#Plain-Tasks" class="headerlink" title="Plain Tasks"></a>Plain Tasks</h1><hr>
+<p><img src="2.png" alt="效果图"></p>
+<ul>
+<li><a href="https://github.com/aziz/PlainTasks" target="_blank" rel="noopener">官方文档</a></li>
+</ul>
+<p>今日事今日毕，使用Plain Tasks可以很方便的规划自己的任务。</p>
+<h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><p><code>Shift+Ctrl+P</code>调出命令行,输入<code>Package Control: Install Package</code><br><img src="1.png" alt><br>输入Plain Tasks直接安装，成功后就能在<code>Preferences/Package Settings</code>中看到<code>PlainTasks</code>这一选项</p>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><h3 id="创建任务表"><a href="#创建任务表" class="headerlink" title="创建任务表"></a>创建任务表</h3><p><code>Shift+Ctrl+P</code>输入<code>tasks</code>，选择<code>New document</code></p>
+<h3 id="任务编辑"><a href="#任务编辑" class="headerlink" title="任务编辑"></a>任务编辑</h3><ul>
+<li><code>Ctrl+i</code>添加一个新任务</li>
+<li><code>Ctrl+d</code>将任务标记为完成，再按一次可将其重置</li>
+<li><code>Alt+c</code>将任务标记为取消，再按一次可将其重置</li>
+<li><code>Shift+Ctrl+a</code>将已完成的任务存档，将其从列表中删除并将它们附加到“存档”项目下文件的底部</li>
+<li><code>Shift+Ctrl+u</code>将在默认浏览器中打开位于光标处的url，但http方案必须包含在&lt;&gt;中，如<code>&lt;https://baidu.com&gt;</code></li>
+<li><code>:</code>行尾带有冒号的任何东西都是项目标题，您也可以通过缩进来嵌套项目。</li>
+<li><code>--</code>,<code>Tab</code>会创建 <code>--- ✄ -----------------------</code>用来分隔</li>
+<li>标签：<br><code>c</code>,<code>Tab</code>创建<code>@critical</code>标签，代表重要且紧急<br><code>h</code>,<code>Tab</code>创建<code>@high</code>标签，代表重要不紧急<br><code>l</code>,<code>Tab</code>创建<code>@low</code>标签，代表不重要且不紧急<br><code>s</code>,<code>Tab</code>创建<code>@stared</code>标签，再按tab一次，将插入当前日期，当您完成或取消带有此类标记的任务时，您将知道自开始以来已经经过了多少时间；如果更改完成/取消/开始时间，则可以删除时间后，在标签后按tab来重新计算花费在任务上的时间<br><code>d</code>,<code>Tab</code>创建<code>@due</code>标签，用来规定任务完成的时间，再按tab一次，将插入当前日期，与<code>@due(0)</code>一样<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>@due(1)</code></td>
+<td align="center">下个月的第一天</td>
+</tr>
+<tr>
+<td align="center"><code>@due(5)</code></td>
+<td align="center">当前月份的第5天（如果当前日期为5日或5日之后，则为下个月）</td>
+</tr>
+<tr>
+<td align="center"><code>@due(2-3)</code></td>
+<td align="center">本年或下一年的2月3日</td>
+</tr>
+<tr>
+<td align="center"><code>@due(20.1.1 1:1)</code></td>
+<td align="center">2020年1月1日在01:01 @due(20-01-01 01:01)</td>
+</tr>
+<tr>
+<td align="center"><code>@due(+)</code></td>
+<td align="center">明天以及@due( +1) 或@due( +1d)</td>
+</tr>
+<tr>
+<td align="center"><code>@due(+w)</code></td>
+<td align="center">自当前日期起一周 @due( +7)</td>
+</tr>
+<tr>
+<td align="center"><code>@due(+2:)</code></td>
+<td align="center">自当前日期起两个小时</td>
+</tr>
+<tr>
+<td align="center"><code>@due(+:555)</code></td>
+<td align="center">自当前日期起555分钟</td>
+</tr>
+<tr>
+<td align="center"><code>@due(+2 12:)</code></td>
+<td align="center">自当前日期起2天12个小时</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="更改配置"><a href="#更改配置" class="headerlink" title="更改配置"></a>更改配置</h3><ul>
+<li><code>Preferences/Package Settings/PlainTasks/Settings-Default</code>中是默认配置</li>
+<li><code>Preferences/Package Settings/PlainTasks/Settings-User</code>是用户配置</li>
+</ul>
+<h4 id="配色更改"><a href="#配色更改" class="headerlink" title="配色更改"></a>配色更改</h4><p>在<code>Preferences/Package Settings/PlainTasks/Settings-User</code>中加入</p>
+<pre class="line-numbers language-sublime"><code class="language-sublime">{"color_scheme": "Packages/PlainTasks/tasks.hidden-tmTheme",}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其他配色可以选择：</p>
+<pre class="line-numbers language-sublime"><code class="language-sublime">Packages/PlainTasks/tasks-dark.hidden-tmTheme
+Packages/PlainTasks/tasks-eighties-colored.hidden-tmTheme
+Packages/PlainTasks/tasks-eighties-dark.hidden-tmTheme
+Packages/PlainTasks/tasks-gray.hidden-tmTheme
+Packages/PlainTasks/tasks-monokai.hidden-tmTheme
+Packages/PlainTasks/tasks-solarized-dark.hidden-tmTheme
+Packages/PlainTasks/tasks-solarized-light.hidden-tmTheme<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="拼写检测"><a href="#拼写检测" class="headerlink" title="拼写检测"></a>拼写检测</h4><p>为了防止sublime拼写检查时报错，可以在<code>Preferences/Settings/User</code>中加入</p>
+<pre class="line-numbers language-sublime"><code class="language-sublime">{
+   “ ignore_words ”：[ “ ☐ ”，“ ✔ ”，“ ✘ ”，“ ✄ ” ]
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="任务统计"><a href="#任务统计" class="headerlink" title="任务统计"></a>任务统计</h3><p>在命令面板中输入<code>Tasks: Copy Statistics</code>，可以直接粘贴到文档里</p>
+<h3 id="进度条设置"><a href="#进度条设置" class="headerlink" title="进度条设置"></a>进度条设置</h3><p>更改进度条显示的格式，可以在<code>Preferences/Settings/User</code>中加入</p>
+<pre class="line-numbers language-sublime"><code class="language-sublime">{
+    "bar_full": "■",   // any char
+    "bar_empty": "☐", // any char
+
+    // if you want to avoid Unicode when copy stats — you can define replacements
+    // e.g. to convert ■■■■■■☐☐☐☐ to [======    ]
+    "replace_stats_chars": [[" ■", " [="], ["■", "="], ["☐ ", " ] "], ["☐", " "]]
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -636,7 +732,7 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Sublime插件推荐》
+                    《Sublime插件》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/22/sublime/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -971,9 +1067,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Sublime插件推荐">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Sublime插件">
                         
-                        <span class="card-title">Sublime插件推荐</span>
+                        <span class="card-title">Sublime插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -982,7 +1078,13 @@
                             
 推荐一下好用的Sublime插件，打造适合自己的编辑器😁。
 
+Plain Tasks
 
+
+官方文档
+
+今日事今日毕，使用Plain Tasks可以很方便的规划自己的任务。
+配置步骤Shift+Ctrl+P调出命令行,输入Package 
                         
                     </div>
                     <div class="publish-info">
@@ -1238,7 +1340,7 @@ cv2.IMREAD_COLO
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">20.1k</span>
+            <span class="white-color">20.9k</span>
             
 
             <br>
