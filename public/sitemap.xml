@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yangting.online/2019/12/22/sublime/</loc>
+    
+    <lastmod>2019-12-22T08:59:11.683Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yangting.online/2019/12/08/opencv/</loc>
     
     <lastmod>2019-12-20T06:22:50.229Z</lastmod>
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://www.yangting.online/categories/index.html</loc>
+    <loc>https://www.yangting.online/404.html</loc>
     
     <lastmod>2019-09-22T12:06:26.000Z</lastmod>
     
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://www.yangting.online/tags/index.html</loc>
+    <loc>https://www.yangting.online/categories/index.html</loc>
     
     <lastmod>2019-09-22T12:06:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.yangting.online/404.html</loc>
+    <loc>https://www.yangting.online/tags/index.html</loc>
     
     <lastmod>2019-09-22T12:06:26.000Z</lastmod>
     
