@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.yangting.online/"/>
-  <updated>2019-12-22T08:59:11.683Z</updated>
+  <updated>2019-12-23T02:04:22.349Z</updated>
   <id>https://www.yangting.online/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.yangting.online/2019/12/22/sublime/"/>
     <id>https://www.yangting.online/2019/12/22/sublime/</id>
     <published>2019-12-22T08:52:00.000Z</published>
-    <updated>2019-12-22T08:59:11.683Z</updated>
+    <updated>2019-12-23T02:04:22.349Z</updated>
     
     <summary type="html">
     
@@ -32,7 +32,7 @@
           &lt;blockquote&gt;
 &lt;p&gt;推荐一下好用的Sublime插件，打造适合自己的编辑器😁。&lt;/p&gt;
 &lt;/blockquote&gt;
-
+&lt;h1 id=&quot;Plain-Tasks&quot;&gt;&lt;a href=&quot;#Plain-Tasks&quot; class=&quot;headerlink&quot;
         
       
     
@@ -48,11 +48,11 @@
   </entry>
   
   <entry>
-    <title>OpenCV</title>
+    <title>OpenCV讲解</title>
     <link href="https://www.yangting.online/2019/12/08/opencv/"/>
     <id>https://www.yangting.online/2019/12/08/opencv/</id>
     <published>2019-12-08T13:09:20.000Z</published>
-    <updated>2019-12-20T06:22:50.229Z</updated>
+    <updated>2019-12-23T02:06:37.471Z</updated>
     
     <summary type="html">
     
@@ -188,11 +188,11 @@
   </entry>
   
   <entry>
-    <title>CVPR2019目标检测算法总结</title>
+    <title>CVPR2019算法总结</title>
     <link href="https://www.yangting.online/2019/09/28/cvpr2019/"/>
     <id>https://www.yangting.online/2019/09/28/cvpr2019/</id>
     <published>2019-09-28T00:22:19.000Z</published>
-    <updated>2019-12-13T11:15:28.159Z</updated>
+    <updated>2019-12-23T02:05:23.780Z</updated>
     
     <summary type="html">
     

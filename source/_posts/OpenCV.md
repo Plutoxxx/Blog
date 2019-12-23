@@ -1,5 +1,5 @@
 ---
-title: OpenCV
+title: OpenCV讲解
 <!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/9.jpg -->
 top: false
 cover: true
