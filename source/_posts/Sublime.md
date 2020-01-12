@@ -1,18 +1,19 @@
 ---
 title: Sublime插件推荐
-top: false
+top: true
 cover: false
 toc: true
 mathjax: true
 date: 2019-12-22 16:52:00
 password:
-summary:
+summary: 推荐一下好用的Sublime插件，打造适合自己的编辑器😁。
 tags:
 - Sublime
 - 工具
 categories:
 - 软件
 ---
+<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=16846088&auto=1&height=66"></iframe></div>
 
 >推荐一下好用的Sublime插件，打造适合自己的编辑器😁。
 
@@ -45,17 +46,19 @@ categories:
 `l`,`Tab`创建`@low`标签，代表不重要且不紧急
 `s`,`Tab`创建`@stared`标签，再按tab一次，将插入当前日期，当您完成或取消带有此类标记的任务时，您将知道自开始以来已经经过了多少时间；如果更改完成/取消/开始时间，则可以删除时间后，在标签后按tab来重新计算花费在任务上的时间
 `d`,`Tab`创建`@due`标签，用来规定任务完成的时间，再按tab一次，将插入当前日期，与`@due(0)`一样
-|符号|含义|
+
+|<font color="#dd00dd">符号</font><br />|<font color="#00dd00">含义</font><br />|
 |:----------------:|:--------------------------------------------------:|
 |`@due(1)`         |下个月的第一天|
 |`@due(5)`         |当前月份的第5天（如果当前日期为5日或5日之后，则为下个月）|
 |`@due(2-3)`       |本年或下一年的2月3日|
-|`@due(20.1.1 1:1)`|2020年1月1日在01:01 @due(20-01-01 01:01)|
-|`@due(+)`         |明天以及@due( +1) 或@due( +1d)|
-|`@due(+w)`        |自当前日期起一周 @due( +7)|
+|`@due(20.1.1 1:1)`|2020年1月1日在01:01 `@due(20-01-01 01:01)`|
+|`@due(+)`         |明天一天`@due( +1)` 或`@due( +1d)`|
+|`@due(+w)`        |自当前日期起一周 `@due( +7)`|
 |`@due(+2:)`       |自当前日期起两个小时|
 |`@due(+:555)`     |自当前日期起555分钟|
 |`@due(+2 12:)`    |自当前日期起2天12个小时|
+
 
 ### 更改配置
 - `Preferences/Package Settings/PlainTasks/Settings-Default`中是默认配置

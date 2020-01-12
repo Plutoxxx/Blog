@@ -7,10 +7,10 @@ toc: true
 mathjax: true
 date: 2019-11-03 14:53:35
 password:
-summary:
+summary: 总结Java中集合相关的知识🤣。
 tags:
 - Java
-- 基础
+- 语言
 categories:
 - Java
 ---

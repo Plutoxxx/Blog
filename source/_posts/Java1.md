@@ -7,10 +7,10 @@ toc: true
 mathjax: true
 date: 2019-10-27 17:30:46
 password:
-summary:
+summary: 讲解Java面向对象的基本特性😆。
 tags:
 - Java
-- 基础
+- 语言
 categories:
 - Java
 ---

@@ -7,7 +7,7 @@ toc: true
 mathjax: true
 date: 2019-12-08 21:09:20
 password:
-summary:
+summary: 讲解python中OpenCV的相关函数🙈
 tags:
 - OpenCV
 - python

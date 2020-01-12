@@ -1,13 +1,13 @@
 ---
 title: PyCharm配置远程连接
 <!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/8.jpg -->
-top: true
+top: false
 cover: false
 toc: true
 mathjax: true
 date: 2019-11-09 13:39:19
 password:
-summary:
+summary: 主要讲解PyCharm远程连接服务器时的相关配置😝。
 tags:
 - PyCharm
 - 服务器配置

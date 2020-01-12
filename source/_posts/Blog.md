@@ -7,7 +7,7 @@ toc: true
 mathjax: true
 date: 2019-09-25 08:27:14
 password:
-summary:
+summary: 主要讲解本blog的搭建过程😁
 tags:
 - Hexo 
 - GitHub 
