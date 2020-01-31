@@ -13,7 +13,7 @@ tags:
 categories:
     - MySQL
 ---
-<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=404375&auto=1&height=66"></iframe></div>
+<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=413834822&auto=1&height=66"></iframe></div>
 
 >将前段时间学习的MySQL语句进行总结一下，嘻嘻🧐。
 
@@ -29,7 +29,7 @@ categories:
 4. `DCL(Data Control Language)`数据控制语言
     用来定义数据库的访问权限以及创建用户，关键字：grant、revoke等。
 
-# DDL
+# DDL-操作数据库、表
 ---
 ## 操作数据库
 ### 创建
@@ -81,9 +81,83 @@ create table 表名(
     列名1 数据类型1,
     列名2 数据类型2,
     ...
-    列名n 数据类型n,
+    列名n 数据类型n
 )
-
 ```
+### 查询
+```MySQL
+# 查询某个数据库中的所有表名称
+show tables;
+# 查询表结构
+desc 表名;
+```
+### 修改
+```MySQL
+# 修改表名
+alter table 表名 rename to 新的表名;
+# 查询表结构
+alter table 表名 character set 字符集名称;
+# 添加一列
+alter table 表名 add 列名 数据类型;
+# 修改列名称 类型
+alter table 表名 change 列名 新列别 新数据类型;
+alter table 表名 modify 列名 新数据类型;
+# 删除列
+alter table 表名 drop 列名;
+```
+### 删除
+```MySQL
+# 删除表
+drop table 表名;
+# 判断表是否存在，存在再删除
+drop table if exists 表名;
+```
+# DML-增删改表中数据
+## 添加
+```MySQL
+# 添加数据
+insert into 表名(列名1,列名2,...列名n) values(值1,值2,...值n);
+```
+>1. 列名和值要一一对应。
+2. 表名后不定义列名，则给所有列添加值`insert into 表名 values(值1,值2,...值n);`。
+3.除了数字类型，其他类型需要使用引号（单双都可以）引起来。
 
-# DML
+## 删除
+```MySQL
+# 删除数据
+delete from 表名 [where 条件];
+# 删除所有记录
+1. delete from 表名; -- 不推荐使用。有多少条记录就会执行多少次删除操作
+2. TRUNCATE TABLE 表名; -- 推荐使用，效率更高 先删除表，然后再创建一张一样的表。
+```
+## 修改
+```MySQL
+# 修改数据
+update 表名 set 列名1 = 值1, 列名2 = 值2,...[where 条件];
+```
+# DQL-查询表中记录
+## 语法
+```MySQL
+select
+    字段列表
+from
+    表名列表
+where
+    条件列表
+group by
+    分组字段
+having
+    分组之后的条件
+order by
+    排序
+limit
+    分页限定
+```
+## 基础查询
+### 简单查询
+```MySQL
+# 查询所有列
+select * from 表名;
+# 查询指定列
+select 字段名1，字段名2... from 表名;
+```
