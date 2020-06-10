@@ -4,18 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
+    <meta name="keywords" content="数据结构与算法, ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习">
     <meta name="baidu-site-verification" content="BNyJmpwbrh">
     <meta name="google-site-verification" content="BNyJmpwbrh">
     <meta name="360-site-verification" content>
     <meta name="description" content="
 
-
-将前段时间学习的MySQL语句进行总结一下，嘻嘻🧐。
-
-MySQL分类
-
-DDL(Data Definition Language)数据定义语言 用来定义数据对象：数据库、表、列等，其中关键字有：create、drop、alter等">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +18,7 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MySQL | ArSw的博客</title>
+    <title>数据结构与算法 | ArSw的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -297,13 +292,13 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MySQL
+                        数据结构与算法
                     </div>
                 </div>
             </div>
@@ -414,12 +409,8 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/语言/" target="_blank">
-                            <span class="chip bg-color">语言</span>
-                        </a>
-                        
-                        <a href="/tags/MySQL/" target="_blank">
-                            <span class="chip bg-color">MySQL</span>
+                        <a href="/tags/数据结构与算法/" target="_blank">
+                            <span class="chip bg-color">数据结构与算法</span>
                         </a>
                         
                     </div>
@@ -430,8 +421,8 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/MySQL/" class="post-category" target="_blank">
-                            MySQL
+                        <a href="/categories/Java/" class="post-category" target="_blank">
+                            Java
                         </a>
                         
                     </div>
@@ -442,7 +433,7 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-12
+                    2020-06-10
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -456,14 +447,14 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    814
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
                 
@@ -479,101 +470,8 @@ DDL(Data Definition Language)数据定义语言 用来定义数据对象：数�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=413834822&auto=1&height=66"></iframe></div>
+                <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26116370&auto=1&height=66"></iframe></div>
 
-<blockquote>
-<p>将前段时间学习的MySQL语句进行总结一下，嘻嘻🧐。</p>
-</blockquote>
-<h1 id="MySQL分类"><a href="#MySQL分类" class="headerlink" title="MySQL分类"></a>MySQL分类</h1><hr>
-<ol>
-<li><code>DDL(Data Definition Language)</code>数据定义语言<br> 用来定义数据对象：数据库、表、列等，其中关键字有：create、drop、alter等。</li>
-<li><code>DML(Data Manipulation Language)</code>数据操纵语言<br> 用来对数据库中表的数据进行增、删、改，其中关键字有：insert、delete、update等。</li>
-<li><code>DQL(Data Query Language)</code>数据查询语言<br> 用来查询数据库中表的数据，其中关键字：select、where等。</li>
-<li><code>DCL(Data Control Language)</code>数据控制语言<br> 用来定义数据库的访问权限以及创建用户，关键字：grant、revoke等。</li>
-</ol>
-<h1 id="DDL-操作数据库、表"><a href="#DDL-操作数据库、表" class="headerlink" title="DDL-操作数据库、表"></a>DDL-操作数据库、表</h1><hr>
-<h2 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 创建数据库：
-create database 数据库名称;
-# 创建数据库，判断不存在，再创建：
-create database if not exists 数据库名称;
-# 创建数据库，并指定字符集：
-create database 数据库名称 character set 字符集名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 查询所有数据库的名称
-show databases;
-# 查询某个数据库的创建语句
-show create database 数据库名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 查询所有数据库的名称
-alter database 数据库名称 character set 字符集;
-# 例如：
-alter database db1 character set utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 删除数据库
-drop database 数据库名称;
-# 判断数据库是否存在，存在再删除
-drop database if exists 数据库名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 使用数据库
-use 数据库名称;
-# 查询当前正在使用的数据库
-select database();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="操作表"><a href="#操作表" class="headerlink" title="操作表"></a>操作表</h2><h3 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 创建表
-create table 表名(
-    列名1 数据类型1,
-    列名2 数据类型2,
-    ...
-    列名n 数据类型n
-)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="查询-1"><a href="#查询-1" class="headerlink" title="查询"></a>查询</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 查询某个数据库中的所有表名称
-show tables;
-# 查询表结构
-desc 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="修改-1"><a href="#修改-1" class="headerlink" title="修改"></a>修改</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 修改表名
-alter table 表名 rename to 新的表名;
-# 查询表结构
-alter table 表名 character set 字符集名称;
-# 添加一列
-alter table 表名 add 列名 数据类型;
-# 修改列名称 类型
-alter table 表名 change 列名 新列别 新数据类型;
-alter table 表名 modify 列名 新数据类型;
-# 删除列
-alter table 表名 drop 列名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="删除-1"><a href="#删除-1" class="headerlink" title="删除"></a>删除</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 删除表
-drop table 表名;
-# 判断表是否存在，存在再删除
-drop table if exists 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="DML-增删改表中数据"><a href="#DML-增删改表中数据" class="headerlink" title="DML-增删改表中数据"></a>DML-增删改表中数据</h1><h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 添加数据
-insert into 表名(列名1,列名2,...列名n) values(值1,值2,...值n);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<blockquote>
-<ol>
-<li>列名和值要一一对应。</li>
-<li>表名后不定义列名，则给所有列添加值<code>insert into 表名 values(值1,值2,...值n);</code>。</li>
-<li>除了数字类型，其他类型需要使用引号（单双都可以）引起来。</li>
-</ol>
-</blockquote>
-<h2 id="删除-2"><a href="#删除-2" class="headerlink" title="删除"></a>删除</h2><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 删除数据
-delete from 表名 [where 条件];
-# 删除所有记录
-1. delete from 表名; -- 不推荐使用。有多少条记录就会执行多少次删除操作
-2. TRUNCATE TABLE 表名; -- 推荐使用，效率更高 先删除表，然后再创建一张一样的表。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="修改-2"><a href="#修改-2" class="headerlink" title="修改"></a>修改</h2><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 修改数据
-update 表名 set 列名1 = 值1, 列名2 = 值2,...[where 条件];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h1 id="DQL-查询表中记录"><a href="#DQL-查询表中记录" class="headerlink" title="DQL-查询表中记录"></a>DQL-查询表中记录</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre class="line-numbers language-MySQL"><code class="language-MySQL">select
-    字段列表
-from
-    表名列表
-where
-    条件列表
-group by
-    分组字段
-having
-    分组之后的条件
-order by
-    排序
-limit
-    分页限定<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h2><h3 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h3><pre class="line-numbers language-MySQL"><code class="language-MySQL"># 查询所有列
-select * from 表名;
-# 查询指定列
-select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -736,7 +634,7 @@ select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="li
         repo: 'Blog',
         owner: 'Plutoxxx',
         admin: "Plutoxxx",
-        id: '2020/01/12/mysql/',
+        id: '2020/06/10/data-structure/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1019,9 +917,10 @@ select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="li
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/10/data-structure/">
                     <div class="card-image">
@@ -1039,9 +938,9 @@ select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="li
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1054,6 +953,7 @@ select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="li
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1072,31 +972,31 @@ select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="li
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/22/sublime/">
+                <a href="/2020/01/12/mysql/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Sublime插件推荐">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="MySQL">
                         
-                        <span class="card-title">Sublime插件推荐</span>
+                        <span class="card-title">MySQL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            推荐一下好用的Sublime插件，打造适合自己的编辑器😁。
+                            将前段时间学习的MySQL语句进行总结一下，嘻嘻🧐。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/软件/" class="post-category" target="_blank">
-                                    软件
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                    MySQL
                                 </a>
                             
                             
@@ -1106,12 +1006,12 @@ select 字段名1，字段名2... from 表名;<span aria-hidden="true" class="li
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Sublime/" target="_blank">
-                        <span class="chip bg-color">Sublime</span>
+                    <a href="/tags/语言/" target="_blank">
+                        <span class="chip bg-color">语言</span>
                     </a>
                     
-                    <a href="/tags/工具/" target="_blank">
-                        <span class="chip bg-color">工具</span>
+                    <a href="/tags/MySQL/" target="_blank">
+                        <span class="chip bg-color">MySQL</span>
                     </a>
                     
                 </div>
