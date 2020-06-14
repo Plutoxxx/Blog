@@ -895,7 +895,7 @@ public class BufferedReaderDemo {
 
 `newLine`方法演示，代码如下：
 
-  ```java
+```java
 public class BufferedWriterDemo throws IOException {
     public static void main(String[] args) throws IOException  {
       	// 创建流对象
