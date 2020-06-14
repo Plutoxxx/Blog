@@ -2,23 +2,24 @@
 	{
 		"name": "夜曲",
 		"artist": "周杰伦",
-		"url": "/medias/music/yequ.mp3",
+		"url": "/medias/music/夜曲.mp3",
 		"cover": "/medias/music/avatars/yequ.jpg"
-	},{
-		"name": "一路向北",
-		"artist": "周杰伦",
-		"url": "/medias/music/yiluxiangbei.mp3",
-		"cover": "/medias/music/avatars/yiluxiangbei.jpg"
 	},
 	{
-		"name": "来自天堂的魔鬼",
-		"artist": "邓紫棋",
-		"url": "/medias/music/tiantangdemogui.mp3",
-		"cover": "/medias/music/avatars/tiantangdemogui.jpg"
+		"name": "生きていたんだよな",
+		"artist": "あいみょん",
+		"url": "/medias/music/生きていたんだよな.mp3",
+		"cover": "/medias/music/avatars/生きていたんだよな.jpg"
+	},
+	{
+		"name": "天气之子",
+		"artist": "RADWIMPS",
+		"url": "/medias/music/Weather.mp3",
+		"cover": "/medias/music/avatars/Weather.jpg"
 	},{
-		"name": "倒数",
-		"artist": "邓紫棋",
-		"url": "/medias/music/daoshu.mp3",
-		"cover": "/medias/music/avatars/daoshu.jpg"
+		"name": "深い森",
+		"artist": "Do As Infinity",
+		"url": "/medias/music/深い森.mp3",
+		"cover": "/medias/music/avatars/深い森.jpg"
 	}
 ]
