@@ -14,7 +14,7 @@ categories:
 ---
 <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26116370&auto=1&height=66"></iframe></div>
 
-# 常见的数据结构
+# 数据结构
 ---
 数据存储的常用结构有：栈、队列、数组、链表和二叉树。我们分别来了解一下：
 
@@ -281,3 +281,5 @@ public class Solution {
     }
 }
 ```
+
+# 算法
