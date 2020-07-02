@@ -98,4 +98,38 @@ if (Test-Path($ChocolateyProfile)) {
 # 功能配置
 ---
 ## 将WT添加到右键
+1. 在Powershall中测试以下两个常量是否正常，若没有报错则继续
+```Powershall
+echo %USERPROFILE%
+echo %LOCALAPPDATA%
+```
+
+2. 在Powshall行中执行以下命令：
+```Powershall
+mkdir "%USERPROFILE%\AppData\Local\terminal"
+``` 
+
+3. 将windows Terminal图标复制到`%USERPROFILE%\AppData\Local\terminal`文件夹中。图片自取：
+![](terminal.ico)
+3. 将下列代码复制保存为.reg注册表文件（WT的路径中用户名可能会不同需要修改），然后双击导入注册表即可。
+
+```Powershall
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt]
+@="Windows terminal here"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Terminal\\terminal.ico"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
+@="C:\\Users\\[用户名]\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+```
+4. 检查Windows Terminal配置文件中是否有`startingDirectory `属性，若没有则将其添加为
+```json
+"startingDirectory": "."
+```
+
+5. 若出现错误，可能是用户名为中文导致出错。建议打开注册表编辑器，检查`HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command`这个路径下的配置是否和文件配置的一样。
+
+6. 效果图：
+![](5.png)
+
 ## 添加Git

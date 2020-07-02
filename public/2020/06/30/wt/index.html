@@ -295,7 +295,7 @@ Windows Terminal是微软发布的一款终端（简称WT）。与传统的cmd�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -412,12 +412,12 @@ Windows Terminal是微软发布的一款终端（简称WT）。与传统的cmd�
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/工具/" target="_blank">
-                            <span class="chip bg-color">工具</span>
-                        </a>
-                        
                         <a href="/tags/Windows-Terminal/" target="_blank">
                             <span class="chip bg-color">Windows Terminal</span>
+                        </a>
+                        
+                        <a href="/tags/工具/" target="_blank">
+                            <span class="chip bg-color">工具</span>
                         </a>
                         
                     </div>
@@ -454,14 +454,14 @@ Windows Terminal是微软发布的一款终端（简称WT）。与传统的cmd�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    787
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
                 
@@ -536,7 +536,36 @@ Import-Module "$ChocolateyProfile"
 </ol>
 <p>大功告成，来张效果图：<br><img src="4.png" alt></p>
 <h1 id="功能配置"><a href="#功能配置" class="headerlink" title="功能配置"></a>功能配置</h1><hr>
-<h2 id="将WT添加到右键"><a href="#将WT添加到右键" class="headerlink" title="将WT添加到右键"></a>将WT添加到右键</h2><h2 id="添加Git"><a href="#添加Git" class="headerlink" title="添加Git"></a>添加Git</h2>
+<h2 id="将WT添加到右键"><a href="#将WT添加到右键" class="headerlink" title="将WT添加到右键"></a>将WT添加到右键</h2><ol>
+<li><p>在Powershall中测试以下两个常量是否正常，若没有报错则继续</p>
+<pre class="line-numbers language-Powershall"><code class="language-Powershall">echo %USERPROFILE%
+echo %LOCALAPPDATA%<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>在Powshall行中执行以下命令：</p>
+<pre class="line-numbers language-Powershall"><code class="language-Powershall">mkdir "%USERPROFILE%\AppData\Local\terminal"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>将windows Terminal图标复制到<code>%USERPROFILE%\AppData\Local\terminal</code>文件夹中。图片自取：<br><img src="terminal.ico" alt></p>
+</li>
+<li><p>将下列代码复制保存为.reg注册表文件（WT的路径中用户名可能会不同需要修改），然后双击导入注册表即可。</p>
+</li>
+</ol>
+<pre class="line-numbers language-Powershall"><code class="language-Powershall">Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt]
+@="Windows terminal here"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Terminal\\terminal.ico"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
+@="C:\\Users\\[用户名]\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="4">
+<li><p>检查Windows Terminal配置文件中是否有<code>startingDirectory</code>属性，若没有则将其添加为</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token property">"startingDirectory"</span><span class="token operator">:</span> <span class="token string">"."</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>若出现错误，可能是用户名为中文导致出错。建议打开注册表编辑器，检查<code>HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command</code>这个路径下的配置是否和文件配置的一样。</p>
+</li>
+<li><p>效果图：<br><img src="5.png" alt></p>
+</li>
+</ol>
+<h2 id="添加Git"><a href="#添加Git" class="headerlink" title="添加Git"></a>添加Git</h2>
             </div>
             <hr />
 
@@ -990,7 +1019,7 @@ Import-Module "$ChocolateyProfile"
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Windows Terminal配置">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Windows Terminal配置">
                         
                         <span class="card-title">Windows Terminal配置</span>
                     </div>
@@ -1021,12 +1050,12 @@ Import-Module "$ChocolateyProfile"
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/工具/" target="_blank">
-                        <span class="chip bg-color">工具</span>
-                    </a>
-                    
                     <a href="/tags/Windows-Terminal/" target="_blank">
                         <span class="chip bg-color">Windows Terminal</span>
+                    </a>
+                    
+                    <a href="/tags/工具/" target="_blank">
+                        <span class="chip bg-color">工具</span>
                     </a>
                     
                 </div>
@@ -1044,7 +1073,7 @@ Import-Module "$ChocolateyProfile"
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="数据结构与算法">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据结构与算法">
                         
                         <span class="card-title">数据结构与算法</span>
                     </div>
@@ -1237,7 +1266,7 @@ Import-Module "$ChocolateyProfile"
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">24.8k</span>
+            <span class="white-color">25.1k</span>
             
 
             <br>
