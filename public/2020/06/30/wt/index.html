@@ -295,7 +295,7 @@ Windows Terminal是微软发布的一款终端（简称WT）。与传统的cmd�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -454,7 +454,7 @@ Windows Terminal是微软发布的一款终端（简称WT）。与传统的cmd�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.1k
                 </div>
                 
 
@@ -515,13 +515,13 @@ Import-Module "$ChocolateyProfile"
 至此，<code>oh-my-posh</code>的安装就完成了，打开<code>WT</code>的效果如下：<br><img src="3.png" alt></li>
 </ol>
 <h2 id="定制settings-json"><a href="#定制settings-json" class="headerlink" title="定制settings.json"></a>定制settings.json</h2><ol>
-<li><p>打开设置，在<code>defaultProfile</code>中配置默认打开的终端程序。<code>copyOnSelect</code>选择<code>true</code>时可以右击实现<code>复制+粘贴</code>的功能。</p>
+<li><p>打开设置，在<code>defaultProfile</code>中配置默认打开的终端程序。<code>copyOnSelect</code>选择<code>true</code>时可以右击实现<code>复制+粘贴</code>的功能。<code>initialCols</code>和<code>initialRows</code>用于指定初始窗口大小。</p>
 </li>
 <li><p>在<code>profiles</code>的中，可以单独为不同程序进行自定义设置。</p>
 <ul>
 <li><p>首先是毛玻璃效果，这个需要调节两个参数，第一个是把<code>useAcrylic</code>设置为<code>true</code>，这是必须的，第二个<code>acrylicOpacity</code>则是调节毛玻璃的透明度，取值范围为0-1，0为完全透明，1为完全不透明。</p>
 </li>
-<li><p><code>fontFace</code>是设置字体，使用的是<code>font Face</code>属性，只需要把字体名称填入进去就可以了。如果没有这个字体，则自动替换成<code>Consolas</code>。除此之外还可以调节字体大小，使用的是<code>fontSize</code>属性。</p>
+<li><p><code>fontFace</code>是设置字体，使用的是<code>Fira Code</code>属性，只需要把字体名称填入进去就可以了。如果没有这个字体，则自动替换成<code>Consolas</code>。除此之外还可以调节字体大小，使用的是<code>fontSize</code>属性。</p>
 </li>
 <li><p><code>background</code>属性可以设置背景颜色，<code>backgroundImage</code>则可以设置背景图片。注意：<code>backgroundImage</code>在毛玻璃特效打开时不起作用。</p>
 </li>
@@ -534,7 +534,7 @@ Import-Module "$ChocolateyProfile"
 </ul>
 </li>
 </ol>
-<p>大功告成，来张效果图：<br><img src="4.png" alt></p>
+<p>大功告成，来张效果图：<br><img src="6.jpg" alt></p>
 <h1 id="功能配置"><a href="#功能配置" class="headerlink" title="功能配置"></a>功能配置</h1><hr>
 <h2 id="将WT添加到右键"><a href="#将WT添加到右键" class="headerlink" title="将WT添加到右键"></a>将WT添加到右键</h2><ol>
 <li><p>在Powershall中测试以下两个常量是否正常，若没有报错则继续</p>
@@ -565,7 +565,27 @@ echo %LOCALAPPDATA%<span aria-hidden="true" class="line-numbers-rows"><span></sp
 <li><p>效果图：<br><img src="5.png" alt></p>
 </li>
 </ol>
-<h2 id="添加Git"><a href="#添加Git" class="headerlink" title="添加Git"></a>添加Git</h2>
+<h2 id="添加Git"><a href="#添加Git" class="headerlink" title="添加Git"></a>添加Git</h2><p>在配置文件的<code>profiles</code>中添加git配置。</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"acrylicOpacity"</span> <span class="token operator">:</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+  <span class="token property">"closeOnExit"</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"colorScheme"</span><span class="token operator">:</span> <span class="token string">"DjangoSmooth"</span><span class="token punctuation">,</span>
+  <span class="token property">"commandline"</span> <span class="token operator">:</span> <span class="token string">"F:\\software\\GitHub\\Git\\bin\\bash.exe"</span><span class="token punctuation">,</span>
+  <span class="token property">"icon"</span><span class="token operator">:</span> <span class="token string">"C:\\software\\Windows Terminal\\git.png"</span><span class="token punctuation">,</span>
+  <span class="token property">"cursorColor"</span> <span class="token operator">:</span> <span class="token string">"#FFFFFF"</span><span class="token punctuation">,</span>
+  <span class="token property">"cursorShape"</span> <span class="token operator">:</span> <span class="token string">"bar"</span><span class="token punctuation">,</span>
+  <span class="token property">"fontFace"</span> <span class="token operator">:</span> <span class="token string">"Fira Code"</span><span class="token punctuation">,</span>
+  <span class="token property">"fontSize"</span> <span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+  <span class="token property">"historySize"</span> <span class="token operator">:</span> <span class="token number">9001</span><span class="token punctuation">,</span>
+  <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"Git"</span><span class="token punctuation">,</span>
+  <span class="token property">"padding"</span> <span class="token operator">:</span> <span class="token string">"0, 0, 0, 0"</span><span class="token punctuation">,</span>
+  <span class="token property">"snapOnInput"</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"startingDirectory"</span> <span class="token operator">:</span> <span class="token string">"."</span><span class="token punctuation">,</span>
+  <span class="token property">"useAcrylic"</span> <span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其中<code>commandline</code>是git的安装路径，<code>icon</code>是图标路径，git图片自取：<br><img src="git.png" alt></p>
+<p>效果图：<br><img src="7.png" alt></p>
+
             </div>
             <hr />
 
@@ -1019,7 +1039,7 @@ echo %LOCALAPPDATA%<span aria-hidden="true" class="line-numbers-rows"><span></sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Windows Terminal配置">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Windows Terminal配置">
                         
                         <span class="card-title">Windows Terminal配置</span>
                     </div>
@@ -1073,7 +1093,7 @@ echo %LOCALAPPDATA%<span aria-hidden="true" class="line-numbers-rows"><span></sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据结构与算法">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="数据结构与算法">
                         
                         <span class="card-title">数据结构与算法</span>
                     </div>

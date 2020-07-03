@@ -78,12 +78,12 @@ if (Test-Path($ChocolateyProfile)) {
 
 
 ## 定制settings.json
-1. 打开设置，在`defaultProfile`中配置默认打开的终端程序。`copyOnSelect`选择`true`时可以右击实现`复制+粘贴`的功能。
+1. 打开设置，在`defaultProfile`中配置默认打开的终端程序。`copyOnSelect`选择`true`时可以右击实现`复制+粘贴`的功能。`initialCols`和`initialRows`用于指定初始窗口大小。
 
 2. 在`profiles`的中，可以单独为不同程序进行自定义设置。
     * 首先是毛玻璃效果，这个需要调节两个参数，第一个是把`useAcrylic`设置为`true`，这是必须的，第二个`acrylicOpacity`则是调节毛玻璃的透明度，取值范围为0-1，0为完全透明，1为完全不透明。
     
-    * `fontFace`是设置字体，使用的是`font Face`属性，只需要把字体名称填入进去就可以了。如果没有这个字体，则自动替换成`Consolas`。除此之外还可以调节字体大小，使用的是`fontSize`属性。
+    * `fontFace`是设置字体，使用的是`Fira Code`属性，只需要把字体名称填入进去就可以了。如果没有这个字体，则自动替换成`Consolas`。除此之外还可以调节字体大小，使用的是`fontSize`属性。
     
     * `background`属性可以设置背景颜色，`backgroundImage`则可以设置背景图片。注意：`backgroundImage`在毛玻璃特效打开时不起作用。
 
@@ -94,7 +94,7 @@ if (Test-Path($ChocolateyProfile)) {
     * 关于`colorScheme`属性，这个属性用于修改配色方案，默认9种，可以在[官网](https://docs.microsoft.com/zh-cn/windows/terminal/customize-settings/color-schemes)中找到。当然也可以自己定义新的配色方案，在schemes中添加。更多的配色方案可以在[此处](https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal)找到
 
 大功告成，来张效果图：
-![](4.png)
+![](6.jpg)
 # 功能配置
 ---
 ## 将WT添加到右键
@@ -133,3 +133,29 @@ Windows Registry Editor Version 5.00
 ![](5.png)
 
 ## 添加Git
+
+在配置文件的`profiles`中添加git配置。
+```json
+{
+  "acrylicOpacity" : 0.5,
+  "closeOnExit" : true,
+  "colorScheme": "DjangoSmooth",
+  "commandline" : "F:\\software\\GitHub\\Git\\bin\\bash.exe",
+  "icon": "C:\\software\\Windows Terminal\\git.png",
+  "cursorColor" : "#FFFFFF",
+  "cursorShape" : "bar",
+  "fontFace" : "Fira Code",
+  "fontSize" : 12,
+  "historySize" : 9001,
+  "name" : "Git",
+  "padding" : "0, 0, 0, 0",
+  "snapOnInput" : true,
+  "startingDirectory" : ".",
+  "useAcrylic" : true
+}
+```
+其中`commandline`是git的安装路径，`icon`是图标路径，git图片自取：
+![](git.png)
+
+效果图：
+![](7.png)
