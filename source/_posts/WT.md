@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal配置
-img: /medias/featureimages/21.jpg
+img: /medias/featureimages/11.jpg
 top: true
 cover: false
 toc: true

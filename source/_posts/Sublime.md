@@ -1,6 +1,6 @@
 ---
 title: Sublime插件推荐
-img: /medias/featureimages/17.jpg
+img: /medias/featureimages/10.jpg
 top: false
 cover: false
 toc: true

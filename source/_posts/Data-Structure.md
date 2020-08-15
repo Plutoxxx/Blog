@@ -1,5 +1,6 @@
 ---
 title: 数据结构与算法
+img: /medias/featureimages/2.jpg
 top: false
 cover: false
 toc: true

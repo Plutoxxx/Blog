@@ -1,6 +1,6 @@
 ---
 title: Hexo-Github-Netlify博客搭建教程
-img: /medias/featureimages/9.jpg
+img: /medias/featureimages/0.jpg
 top: true
 cover: true
 toc: true

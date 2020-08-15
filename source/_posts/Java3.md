@@ -1,6 +1,6 @@
 ---
 title: Java基础③
-<!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/7.jpg -->
+img: /medias/featureimages/6.jpg
 top: false
 cover: false
 toc: true
