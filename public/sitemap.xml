@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yangting.online/2019/11/03/java2/</loc>
+    
+    <lastmod>2020-09-12T08:59:14.689Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yangting.online/2020/06/30/wt/</loc>
     
     <lastmod>2020-08-15T08:26:36.587Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://www.yangting.online/2020/01/12/mysql/</loc>
     
     <lastmod>2020-08-15T08:25:44.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/11/03/java2/</loc>
-    
-    <lastmod>2020-08-15T08:25:07.935Z</lastmod>
     
   </url>
   
@@ -107,6 +107,13 @@
   </url>
   
   <url>
+    <loc>https://www.yangting.online/categories/index.html</loc>
+    
+    <lastmod>2019-09-22T12:06:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yangting.online/archives/index.html</loc>
     
     <lastmod>2019-09-22T12:06:26.000Z</lastmod>
@@ -115,13 +122,6 @@
   
   <url>
     <loc>https://www.yangting.online/tags/index.html</loc>
-    
-    <lastmod>2019-09-22T12:06:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/categories/index.html</loc>
     
     <lastmod>2019-09-22T12:06:26.000Z</lastmod>
     
