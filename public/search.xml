@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>CND加速</title>
+      <link href="/2020/09/21/cnd/"/>
+      <url>/2020/09/21/cnd/</url>
+      
+        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=22692292&auto=1&height=66"></iframe></div><blockquote><p>总结下使用免费CDN加速网站访问的过程👀。</p></blockquote><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h1 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h1><h2 id="Cloudflare账号注册"><a href="#Cloudflare账号注册" class="headerlink" title="Cloudflare账号注册"></a>Cloudflare账号注册</h2><h2 id="CDN加速配置"><a href="#CDN加速配置" class="headerlink" title="CDN加速配置"></a>CDN加速配置</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows Terminal配置</title>
       <link href="/2020/06/30/wt/"/>
       <url>/2020/06/30/wt/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> Windows Terminal </tag>
-            
             <tag> 工具 </tag>
+            
+            <tag> Windows Terminal </tag>
             
         </tags>
       
@@ -72,9 +99,9 @@
       
         <tags>
             
-            <tag> MySQL </tag>
-            
             <tag> 语言 </tag>
+            
+            <tag> MySQL </tag>
             
         </tags>
       
@@ -153,9 +180,9 @@
       
         <tags>
             
-            <tag> 语言 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 语言 </tag>
             
         </tags>
       
@@ -207,9 +234,9 @@
       
         <tags>
             
-            <tag> 语言 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 语言 </tag>
             
         </tags>
       
@@ -234,9 +261,9 @@
       
         <tags>
             
-            <tag> 语言 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 语言 </tag>
             
         </tags>
       
