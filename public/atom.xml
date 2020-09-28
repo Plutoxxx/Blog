@@ -38,9 +38,9 @@
       <category term="环境搭建" scheme="https://www.yangting.online/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="博客" scheme="https://www.yangting.online/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="工具" scheme="https://www.yangting.online/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="博客" scheme="https://www.yangting.online/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -346,13 +346,13 @@
       <category term="环境搭建" scheme="https://www.yangting.online/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     
     
+      <category term="博客" scheme="https://www.yangting.online/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
       <category term="Hexo" scheme="https://www.yangting.online/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://www.yangting.online/tags/GitHub/"/>
     
       <category term="Netlify" scheme="https://www.yangting.online/tags/Netlify/"/>
-    
-      <category term="博客" scheme="https://www.yangting.online/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   

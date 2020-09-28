@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 博客 </tag>
-            
             <tag> 工具 </tag>
+            
+            <tag> 博客 </tag>
             
         </tags>
       
@@ -317,13 +317,13 @@
       
         <tags>
             
+            <tag> 博客 </tag>
+            
             <tag> Hexo </tag>
             
             <tag> GitHub </tag>
             
             <tag> Netlify </tag>
-            
-            <tag> 博客 </tag>
             
         </tags>
       
