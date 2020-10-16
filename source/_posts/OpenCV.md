@@ -1,6 +1,6 @@
 ---
 title: OpenCV讲解
-<!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/9.jpg -->
+img: /medias/featureimages/8.jpg
 top: false
 cover: true
 toc: true

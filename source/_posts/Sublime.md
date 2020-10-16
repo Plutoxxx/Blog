@@ -1,6 +1,7 @@
 ---
 title: Sublime插件推荐
-top: true
+img: /medias/featureimages/10.jpg
+top: false
 cover: false
 toc: true
 mathjax: true

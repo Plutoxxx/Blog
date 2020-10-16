@@ -1,6 +1,7 @@
 ---
 title: Windows Terminal配置
-top: false
+img: /medias/featureimages/11.jpg
+top: true
 cover: false
 toc: true
 mathjax: true

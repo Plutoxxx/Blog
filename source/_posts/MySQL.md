@@ -1,5 +1,6 @@
 ---
 title: MySQL
+img: /medias/featureimages/7.jpg
 top: false
 cover: false
 toc: true

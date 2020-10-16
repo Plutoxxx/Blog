@@ -1,6 +1,6 @@
 ---
 title: Java基础②
-<!-- img: https://image-1300514593.cos.ap-shanghai.myqcloud.com/featureimages/3.jpg -->
+img: /medias/featureimages/4.jpg
 top: false
 cover: false
 toc: true
@@ -68,7 +68,7 @@ List是Collection集合的子接口，不但继承了Collection接口中的方�
 ### 3. ArrayList集合（List子类）
 * 数据存储的格式是数组结构。元素增删慢，查找快。
 
-### 4. LinkList集合（List子类）
+### 4. LinkedList集合（List子类）
 * 数据存储的结构是链表结构。元素增删快，查询慢。
 * 里边包含了大量操作首尾元素的方法。
 - `public void addFirst(E e)`：将指定元素插入此列表的开头。
