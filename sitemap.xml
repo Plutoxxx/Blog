@@ -2,23 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.yangting.online/2020/06/10/data-structure/</loc>
+    <loc>https://www.yangting.online/2020/09/21/cdn/</loc>
     
-    <lastmod>2020-06-18T14:10:52.136Z</lastmod>
+    <lastmod>2020-10-16T13:20:35.426Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2020/06/30/wt/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2019/12/22/sublime/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2019/11/09/pycharm/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.473Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2019/12/08/opencv/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.468Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2020/01/12/mysql/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.465Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.yangting.online/2019/12/01/java3/</loc>
     
-    <lastmod>2020-06-14T12:13:55.703Z</lastmod>
+    <lastmod>2020-10-16T11:25:51.462Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2019/11/03/java2/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.458Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2019/10/27/java1/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.447Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2020/06/10/data-structure/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.yangting.online/2019/09/28/cvpr2019/</loc>
+    
+    <lastmod>2020-10-16T11:25:51.432Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.yangting.online/2019/09/25/blog/</loc>
     
-    <lastmod>2020-06-14T08:16:28.653Z</lastmod>
+    <lastmod>2020-10-16T11:25:51.384Z</lastmod>
     
   </url>
   
@@ -61,55 +124,6 @@
     <loc>https://www.yangting.online/about/index.html</loc>
     
     <lastmod>2020-02-05T10:48:49.640Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/12/22/sublime/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.635Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/11/09/pycharm/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.622Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/12/08/opencv/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.534Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2020/01/12/mysql/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.532Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/11/03/java2/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.519Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/10/27/java1/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.519Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/09/28/cvpr2019/</loc>
-    
-    <lastmod>2020-02-05T10:48:49.509Z</lastmod>
     
   </url>
   
