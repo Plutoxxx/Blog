@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.yangting.online/2019/09/28/cvpr2019/</loc>
+    
+    <lastmod>2021-07-06T09:00:41.305Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.yangting.online/2020/09/21/cdn/</loc>
     
-    <lastmod>2020-10-16T13:20:35.426Z</lastmod>
+    <lastmod>2021-07-06T08:56:00.314Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.yangting.online/2020/06/30/wt/</loc>
     
-    <lastmod>2020-10-16T11:25:51.479Z</lastmod>
+    <lastmod>2021-07-06T08:52:16.439Z</lastmod>
     
   </url>
   
@@ -68,13 +75,6 @@
     <loc>https://www.yangting.online/2020/06/10/data-structure/</loc>
     
     <lastmod>2020-10-16T11:25:51.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.yangting.online/2019/09/28/cvpr2019/</loc>
-    
-    <lastmod>2020-10-16T11:25:51.432Z</lastmod>
     
   </url>
   
